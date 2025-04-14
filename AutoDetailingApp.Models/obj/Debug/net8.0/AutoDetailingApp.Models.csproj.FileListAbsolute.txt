@@ -1,0 +1,11 @@
+C:\Users\shika\source\repos\AutoDetailingApp\AutoDetailingApp.Models\obj\Debug\net8.0\AutoDetailingApp.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\shika\source\repos\AutoDetailingApp\AutoDetailingApp.Models\obj\Debug\net8.0\AutoDetailingApp.Models.AssemblyInfoInputs.cache
+C:\Users\shika\source\repos\AutoDetailingApp\AutoDetailingApp.Models\obj\Debug\net8.0\AutoDetailingApp.Models.AssemblyInfo.cs
+C:\Users\shika\source\repos\AutoDetailingApp\AutoDetailingApp.Models\obj\Debug\net8.0\AutoDetailingApp.Models.csproj.CoreCompileInputs.cache
+C:\Users\shika\source\repos\AutoDetailingApp\AutoDetailingApp.Models\bin\Debug\net8.0\AutoDetailingApp.Models.deps.json
+C:\Users\shika\source\repos\AutoDetailingApp\AutoDetailingApp.Models\bin\Debug\net8.0\AutoDetailingApp.Models.dll
+C:\Users\shika\source\repos\AutoDetailingApp\AutoDetailingApp.Models\bin\Debug\net8.0\AutoDetailingApp.Models.pdb
+C:\Users\shika\source\repos\AutoDetailingApp\AutoDetailingApp.Models\obj\Debug\net8.0\AutoDetailingApp.Models.dll
+C:\Users\shika\source\repos\AutoDetailingApp\AutoDetailingApp.Models\obj\Debug\net8.0\refint\AutoDetailingApp.Models.dll
+C:\Users\shika\source\repos\AutoDetailingApp\AutoDetailingApp.Models\obj\Debug\net8.0\AutoDetailingApp.Models.pdb
+C:\Users\shika\source\repos\AutoDetailingApp\AutoDetailingApp.Models\obj\Debug\net8.0\ref\AutoDetailingApp.Models.dll
