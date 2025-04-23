@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\VivoDetailing\\AutoDetailingApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F47BC82E-4EAB-4667-B789-5B55212A3EE2}|AutoDetailingApp\\AutoDetailingApp.csproj|d:\\vivodetailing\\autodetailingapp\\autodetailingapp\\wwwroot\\css\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F47BC82E-4EAB-4667-B789-5B55212A3EE2}|AutoDetailingApp\\AutoDetailingApp.csproj|solutionrelative:autodetailingapp\\wwwroot\\css\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F47BC82E-4EAB-4667-B789-5B55212A3EE2}|AutoDetailingApp\\AutoDetailingApp.csproj|d:\\vivodetailing\\autodetailingapp\\autodetailingapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F47BC82E-4EAB-4667-B789-5B55212A3EE2}|AutoDetailingApp\\AutoDetailingApp.csproj|solutionrelative:autodetailingapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "index.css",
+              "DocumentMoniker": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\css\\index.css",
+              "RelativeDocumentMoniker": "AutoDetailingApp\\wwwroot\\css\\index.css",
+              "ToolTip": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\css\\index.css",
+              "RelativeToolTip": "AutoDetailingApp\\wwwroot\\css\\index.css",
+              "ViewState": "AgIAAPwAAAAAAAAAAAAAADoBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-04-23T20:55:35.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "AutoDetailingApp\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "AutoDetailingApp\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-23T20:52:56.708Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

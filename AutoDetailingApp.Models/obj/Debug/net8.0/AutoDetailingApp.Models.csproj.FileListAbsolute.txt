@@ -9,3 +9,15 @@ C:\Users\shika\source\repos\AutoDetailingApp\AutoDetailingApp.Models\obj\Debug\n
 C:\Users\shika\source\repos\AutoDetailingApp\AutoDetailingApp.Models\obj\Debug\net8.0\refint\AutoDetailingApp.Models.dll
 C:\Users\shika\source\repos\AutoDetailingApp\AutoDetailingApp.Models\obj\Debug\net8.0\AutoDetailingApp.Models.pdb
 C:\Users\shika\source\repos\AutoDetailingApp\AutoDetailingApp.Models\obj\Debug\net8.0\ref\AutoDetailingApp.Models.dll
+D:\VivoDetailing\AutoDetailingApp\AutoDetailingApp.Models\bin\Debug\net8.0\AutoDetailingApp.Models.deps.json
+D:\VivoDetailing\AutoDetailingApp\AutoDetailingApp.Models\bin\Debug\net8.0\AutoDetailingApp.Models.dll
+D:\VivoDetailing\AutoDetailingApp\AutoDetailingApp.Models\bin\Debug\net8.0\AutoDetailingApp.Models.pdb
+D:\VivoDetailing\AutoDetailingApp\AutoDetailingApp.Models\obj\Debug\net8.0\AutoDetailingApp.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\VivoDetailing\AutoDetailingApp\AutoDetailingApp.Models\obj\Debug\net8.0\AutoDetailingApp.Models.AssemblyInfoInputs.cache
+D:\VivoDetailing\AutoDetailingApp\AutoDetailingApp.Models\obj\Debug\net8.0\AutoDetailingApp.Models.AssemblyInfo.cs
+D:\VivoDetailing\AutoDetailingApp\AutoDetailingApp.Models\obj\Debug\net8.0\AutoDetailingApp.Models.csproj.CoreCompileInputs.cache
+D:\VivoDetailing\AutoDetailingApp\AutoDetailingApp.Models\obj\Debug\net8.0\AutoDetailingApp.Models.sourcelink.json
+D:\VivoDetailing\AutoDetailingApp\AutoDetailingApp.Models\obj\Debug\net8.0\AutoDetailingApp.Models.dll
+D:\VivoDetailing\AutoDetailingApp\AutoDetailingApp.Models\obj\Debug\net8.0\refint\AutoDetailingApp.Models.dll
+D:\VivoDetailing\AutoDetailingApp\AutoDetailingApp.Models\obj\Debug\net8.0\AutoDetailingApp.Models.pdb
+D:\VivoDetailing\AutoDetailingApp\AutoDetailingApp.Models\obj\Debug\net8.0\ref\AutoDetailingApp.Models.dll

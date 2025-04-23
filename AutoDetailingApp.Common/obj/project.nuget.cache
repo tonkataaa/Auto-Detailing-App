@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Dfp4s5bDipA=",
+  "dgSpecHash": "IV4cN6N2U+M=",
   "success": true,
-  "projectFilePath": "C:\\Users\\shika\\source\\repos\\AutoDetailingApp\\AutoDetailingApp.Common\\AutoDetailingApp.Common.csproj",
+  "projectFilePath": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp.Common\\AutoDetailingApp.Common.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\shika\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.13\\microsoft.aspnetcore.cryptography.internal.8.0.13.nupkg.sha512",
     "C:\\Users\\shika\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\8.0.13\\microsoft.aspnetcore.cryptography.keyderivation.8.0.13.nupkg.sha512",
