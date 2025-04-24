@@ -18,4 +18,8 @@
 		<ProjectReference Include="..\AutoDetailingApp.Common\AutoDetailingApp.Common.csproj" />
 		<ProjectReference Include="..\AutoDetailingApp.Models\AutoDetailingApp.Models.csproj" />
 	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="wwwroot\images\" />
+	</ItemGroup>
 </Project>

@@ -13,20 +13,12 @@
       "PackagePath": "staticwebassets\\css\\services.css"
     },
     {
-      "Id": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\css\\site.css",
-      "PackagePath": "staticwebassets\\css\\site.css"
-    },
-    {
       "Id": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
       "Id": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\js\\navigation.js",
       "PackagePath": "staticwebassets\\js\\navigation.js"
-    },
-    {
-      "Id": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\js\\site.js",
-      "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
       "Id": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\lib\\bootstrap\\LICENSE",

@@ -3,28 +3,32 @@
   "WorkspaceRootPath": "D:\\VivoDetailing\\AutoDetailingApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F47BC82E-4EAB-4667-B789-5B55212A3EE2}|AutoDetailingApp\\AutoDetailingApp.csproj|d:\\vivodetailing\\autodetailingapp\\autodetailingapp\\views\\home\\services.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F47BC82E-4EAB-4667-B789-5B55212A3EE2}|AutoDetailingApp\\AutoDetailingApp.csproj|solutionrelative:autodetailingapp\\views\\home\\services.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F47BC82E-4EAB-4667-B789-5B55212A3EE2}|AutoDetailingApp\\AutoDetailingApp.csproj|d:\\vivodetailing\\autodetailingapp\\autodetailingapp\\views\\service\\service.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F47BC82E-4EAB-4667-B789-5B55212A3EE2}|AutoDetailingApp\\AutoDetailingApp.csproj|solutionrelative:autodetailingapp\\views\\service\\service.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F47BC82E-4EAB-4667-B789-5B55212A3EE2}|AutoDetailingApp\\AutoDetailingApp.csproj|d:\\vivodetailing\\autodetailingapp\\autodetailingapp\\controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F47BC82E-4EAB-4667-B789-5B55212A3EE2}|AutoDetailingApp\\AutoDetailingApp.csproj|solutionrelative:autodetailingapp\\controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F47BC82E-4EAB-4667-B789-5B55212A3EE2}|AutoDetailingApp\\AutoDetailingApp.csproj|d:\\vivodetailing\\autodetailingapp\\autodetailingapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F47BC82E-4EAB-4667-B789-5B55212A3EE2}|AutoDetailingApp\\AutoDetailingApp.csproj|solutionrelative:autodetailingapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F47BC82E-4EAB-4667-B789-5B55212A3EE2}|AutoDetailingApp\\AutoDetailingApp.csproj|d:\\vivodetailing\\autodetailingapp\\autodetailingapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F47BC82E-4EAB-4667-B789-5B55212A3EE2}|AutoDetailingApp\\AutoDetailingApp.csproj|solutionrelative:autodetailingapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F47BC82E-4EAB-4667-B789-5B55212A3EE2}|AutoDetailingApp\\AutoDetailingApp.csproj|d:\\vivodetailing\\autodetailingapp\\autodetailingapp\\wwwroot\\css\\services.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{F47BC82E-4EAB-4667-B789-5B55212A3EE2}|AutoDetailingApp\\AutoDetailingApp.csproj|solutionrelative:autodetailingapp\\wwwroot\\css\\services.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F47BC82E-4EAB-4667-B789-5B55212A3EE2}|AutoDetailingApp\\AutoDetailingApp.csproj|d:\\vivodetailing\\autodetailingapp\\autodetailingapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F47BC82E-4EAB-4667-B789-5B55212A3EE2}|AutoDetailingApp\\AutoDetailingApp.csproj|solutionrelative:autodetailingapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F47BC82E-4EAB-4667-B789-5B55212A3EE2}|AutoDetailingApp\\AutoDetailingApp.csproj|d:\\vivodetailing\\autodetailingapp\\autodetailingapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F47BC82E-4EAB-4667-B789-5B55212A3EE2}|AutoDetailingApp\\AutoDetailingApp.csproj|solutionrelative:autodetailingapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F47BC82E-4EAB-4667-B789-5B55212A3EE2}|AutoDetailingApp\\AutoDetailingApp.csproj|d:\\vivodetailing\\autodetailingapp\\autodetailingapp\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F47BC82E-4EAB-4667-B789-5B55212A3EE2}|AutoDetailingApp\\AutoDetailingApp.csproj|solutionrelative:autodetailingapp\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F47BC82E-4EAB-4667-B789-5B55212A3EE2}|AutoDetailingApp\\AutoDetailingApp.csproj|d:\\vivodetailing\\autodetailingapp\\autodetailingapp\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F47BC82E-4EAB-4667-B789-5B55212A3EE2}|AutoDetailingApp\\AutoDetailingApp.csproj|solutionrelative:autodetailingapp\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F47BC82E-4EAB-4667-B789-5B55212A3EE2}|AutoDetailingApp\\AutoDetailingApp.csproj|d:\\vivodetailing\\autodetailingapp\\autodetailingapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F47BC82E-4EAB-4667-B789-5B55212A3EE2}|AutoDetailingApp\\AutoDetailingApp.csproj|solutionrelative:autodetailingapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,73 +38,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "services.css",
-              "DocumentMoniker": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\css\\services.css",
-              "RelativeDocumentMoniker": "AutoDetailingApp\\wwwroot\\css\\services.css",
-              "ToolTip": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\css\\services.css",
-              "RelativeToolTip": "AutoDetailingApp\\wwwroot\\css\\services.css",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAowOoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-04-24T06:18:19.728Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Services.cshtml",
-              "DocumentMoniker": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\Views\\Home\\Services.cshtml",
-              "RelativeDocumentMoniker": "AutoDetailingApp\\Views\\Home\\Services.cshtml",
-              "ToolTip": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\Views\\Home\\Services.cshtml",
-              "RelativeToolTip": "AutoDetailingApp\\Views\\Home\\Services.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-24T06:16:30.391Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\Program.cs",
               "RelativeDocumentMoniker": "AutoDetailingApp\\Program.cs",
               "ToolTip": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\Program.cs",
               "RelativeToolTip": "AutoDetailingApp\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T06:11:53.097Z"
+              "WhenOpened": "2025-04-24T18:22:16.906Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "AutoDetailingApp\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "AutoDetailingApp\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T06:09:53.817Z"
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "AutoDetailingApp\\Views\\_ViewImports.cshtml",
+              "ToolTip": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "AutoDetailingApp\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-24T18:22:04.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "AutoDetailingApp\\Views\\_ViewStart.cshtml",
+              "ToolTip": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "AutoDetailingApp\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-24T18:21:54.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Service.cshtml",
+              "DocumentMoniker": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\Views\\Service\\Service.cshtml",
+              "RelativeDocumentMoniker": "AutoDetailingApp\\Views\\Service\\Service.cshtml",
+              "ToolTip": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\Views\\Service\\Service.cshtml",
+              "RelativeToolTip": "AutoDetailingApp\\Views\\Service\\Service.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-24T17:31:48.847Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ServiceController.cs",
+              "DocumentMoniker": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\Controllers\\ServiceController.cs",
+              "RelativeDocumentMoniker": "AutoDetailingApp\\Controllers\\ServiceController.cs",
+              "ToolTip": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\Controllers\\ServiceController.cs",
+              "RelativeToolTip": "AutoDetailingApp\\Controllers\\ServiceController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T17:24:48.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "AutoDetailingApp\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "AutoDetailingApp\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAADsAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-24T06:05:08.591Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "AutoDetailingApp\\Views\\Home\\Index.cshtml",
@@ -108,8 +128,7 @@
               "RelativeToolTip": "AutoDetailingApp\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-23T20:52:56.708Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T20:52:56.708Z"
             }
           ]
         }
