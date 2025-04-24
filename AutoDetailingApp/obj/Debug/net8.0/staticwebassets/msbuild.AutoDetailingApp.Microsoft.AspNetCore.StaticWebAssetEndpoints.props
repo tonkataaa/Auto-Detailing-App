@@ -24,6 +24,18 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Ln\u002BGpDj6HDA7VG4XlsYawRMu39H4fosGiaVXaAkwl8c="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"5273"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Ln\u002BGpDj6HDA7VG4XlsYawRMu39H4fosGiaVXaAkwl8c=\u0022"},{"Name":"Last-Modified","Value":"Wed, 23 Apr 2025 20:56:12 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AutoDetailingApp/css/services.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\services.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-KgdOSbnHvg6q9rLywbOFHZxR3yo3dLaptms/EOeGu7s="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3693"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022KgdOSbnHvg6q9rLywbOFHZxR3yo3dLaptms/EOeGu7s=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 06:18:42 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AutoDetailingApp/css/services.i1i60u6jlw.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\services.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"i1i60u6jlw"},{"Name":"integrity","Value":"sha256-KgdOSbnHvg6q9rLywbOFHZxR3yo3dLaptms/EOeGu7s="},{"Name":"label","Value":"_content/AutoDetailingApp/css/services.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3693"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022KgdOSbnHvg6q9rLywbOFHZxR3yo3dLaptms/EOeGu7s=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 06:18:42 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/AutoDetailingApp/css/site.c2tiyv64ts.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>

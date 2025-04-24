@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NBmgbCDh4AArlPYZrCxRdaDC4TUIwP2OivY70V0j8r0=",
+  "Hash": "AQMaHMQqNEw8oW8UgEk3GTACom080BZeG6KH4yGb5hE=",
   "Source": "AutoDetailingApp",
   "BasePath": "_content/AutoDetailingApp",
   "Mode": "Default",
@@ -1338,6 +1338,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\index.css"
+    },
+    {
+      "Identity": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\css\\services.css",
+      "SourceId": "AutoDetailingApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\",
+      "BasePath": "_content/AutoDetailingApp",
+      "RelativePath": "css/services#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "i1i60u6jlw",
+      "Integrity": "KgdOSbnHvg6q9rLywbOFHZxR3yo3dLaptms/EOeGu7s=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\services.css"
     },
     {
       "Identity": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\css\\site.css",
@@ -2865,6 +2886,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-Ln+GpDj6HDA7VG4XlsYawRMu39H4fosGiaVXaAkwl8c="
+        }
+      ]
+    },
+    {
+      "Route": "css/services.css",
+      "AssetFile": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\css\\services.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3693"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KgdOSbnHvg6q9rLywbOFHZxR3yo3dLaptms/EOeGu7s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 06:18:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KgdOSbnHvg6q9rLywbOFHZxR3yo3dLaptms/EOeGu7s="
+        }
+      ]
+    },
+    {
+      "Route": "css/services.i1i60u6jlw.css",
+      "AssetFile": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\css\\services.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3693"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KgdOSbnHvg6q9rLywbOFHZxR3yo3dLaptms/EOeGu7s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 06:18:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "i1i60u6jlw"
+        },
+        {
+          "Name": "label",
+          "Value": "css/services.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KgdOSbnHvg6q9rLywbOFHZxR3yo3dLaptms/EOeGu7s="
         }
       ]
     },

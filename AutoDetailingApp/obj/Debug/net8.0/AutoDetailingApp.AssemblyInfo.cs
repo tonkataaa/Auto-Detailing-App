@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AutoDetailingApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7cc5e800fd147967b2c168fbd2d7363dab349aca")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8e80bd6241d1bee4e0245bf72a7aaeb2845c615f")]
 [assembly: System.Reflection.AssemblyProductAttribute("AutoDetailingApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AutoDetailingApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
