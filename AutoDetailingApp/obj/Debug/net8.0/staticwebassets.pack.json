@@ -17,6 +17,18 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\images\\Headlight-Resto-1.png",
+      "PackagePath": "staticwebassets\\images\\Headlight-Resto-1.png"
+    },
+    {
+      "Id": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\images\\exteriorDetailing2.jpg",
+      "PackagePath": "staticwebassets\\images\\exteriorDetailing2.jpg"
+    },
+    {
+      "Id": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\images\\interiorDetailing1.jpg",
+      "PackagePath": "staticwebassets\\images\\interiorDetailing1.jpg"
+    },
+    {
       "Id": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\js\\navigation.js",
       "PackagePath": "staticwebassets\\js\\navigation.js"
     },

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9isAQuKcwTPOKBPwjNOIJXMumLkZuhKJSYDxj7HWBuo=",
+  "Hash": "HxpaDSRKPtA5yJf05C/RMPNPT596LUjlOwHGIgRbKlw=",
   "Source": "AutoDetailingApp",
   "BasePath": "_content/AutoDetailingApp",
   "Mode": "Default",
@@ -1380,6 +1380,69 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\images\\exteriorDetailing2.jpg",
+      "SourceId": "AutoDetailingApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\",
+      "BasePath": "_content/AutoDetailingApp",
+      "RelativePath": "images/exteriorDetailing2#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wp03d36to1",
+      "Integrity": "ZN8iKKoqDWhTFLarj9haCiycu0OqA4J+3EJWQovab8U=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\exteriorDetailing2.jpg"
+    },
+    {
+      "Identity": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\images\\Headlight-Resto-1.png",
+      "SourceId": "AutoDetailingApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\",
+      "BasePath": "_content/AutoDetailingApp",
+      "RelativePath": "images/Headlight-Resto-1#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "yfh5bu1uvl",
+      "Integrity": "cmW1YQjIWy38cPHyftOqjKDAqRC6AN4jEI9G9byLsmg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Headlight-Resto-1.png"
+    },
+    {
+      "Identity": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\images\\interiorDetailing1.jpg",
+      "SourceId": "AutoDetailingApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\",
+      "BasePath": "_content/AutoDetailingApp",
+      "RelativePath": "images/interiorDetailing1#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vhowv543ru",
+      "Integrity": "A/fgWkPKz2N96pGrUcQit/aWXi/Ch2IDXWaNGBMO45A=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\interiorDetailing1.jpg"
     },
     {
       "Identity": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\js\\navigation.js",
@@ -5228,6 +5291,252 @@
         {
           "Name": "integrity",
           "Value": "sha256-16aFlqtpsG9RyieKZUUUjkJpqTgcJtWXwT312I4Iz1s="
+        }
+      ]
+    },
+    {
+      "Route": "images/exteriorDetailing2.jpg",
+      "AssetFile": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\images\\exteriorDetailing2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "127548"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZN8iKKoqDWhTFLarj9haCiycu0OqA4J+3EJWQovab8U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 16:59:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZN8iKKoqDWhTFLarj9haCiycu0OqA4J+3EJWQovab8U="
+        }
+      ]
+    },
+    {
+      "Route": "images/exteriorDetailing2.wp03d36to1.jpg",
+      "AssetFile": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\images\\exteriorDetailing2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "127548"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZN8iKKoqDWhTFLarj9haCiycu0OqA4J+3EJWQovab8U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 16:59:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wp03d36to1"
+        },
+        {
+          "Name": "label",
+          "Value": "images/exteriorDetailing2.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZN8iKKoqDWhTFLarj9haCiycu0OqA4J+3EJWQovab8U="
+        }
+      ]
+    },
+    {
+      "Route": "images/Headlight-Resto-1.png",
+      "AssetFile": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\images\\Headlight-Resto-1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "223392"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cmW1YQjIWy38cPHyftOqjKDAqRC6AN4jEI9G9byLsmg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 16:58:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cmW1YQjIWy38cPHyftOqjKDAqRC6AN4jEI9G9byLsmg="
+        }
+      ]
+    },
+    {
+      "Route": "images/Headlight-Resto-1.yfh5bu1uvl.png",
+      "AssetFile": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\images\\Headlight-Resto-1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "223392"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cmW1YQjIWy38cPHyftOqjKDAqRC6AN4jEI9G9byLsmg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 16:58:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "yfh5bu1uvl"
+        },
+        {
+          "Name": "label",
+          "Value": "images/Headlight-Resto-1.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cmW1YQjIWy38cPHyftOqjKDAqRC6AN4jEI9G9byLsmg="
+        }
+      ]
+    },
+    {
+      "Route": "images/interiorDetailing1.jpg",
+      "AssetFile": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\images\\interiorDetailing1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "148795"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"A/fgWkPKz2N96pGrUcQit/aWXi/Ch2IDXWaNGBMO45A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 16:59:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-A/fgWkPKz2N96pGrUcQit/aWXi/Ch2IDXWaNGBMO45A="
+        }
+      ]
+    },
+    {
+      "Route": "images/interiorDetailing1.vhowv543ru.jpg",
+      "AssetFile": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\images\\interiorDetailing1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "148795"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"A/fgWkPKz2N96pGrUcQit/aWXi/Ch2IDXWaNGBMO45A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 16:59:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vhowv543ru"
+        },
+        {
+          "Name": "label",
+          "Value": "images/interiorDetailing1.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-A/fgWkPKz2N96pGrUcQit/aWXi/Ch2IDXWaNGBMO45A="
         }
       ]
     },

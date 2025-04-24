@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\VivoDetailing\\AutoDetailingApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F47BC82E-4EAB-4667-B789-5B55212A3EE2}|AutoDetailingApp\\AutoDetailingApp.csproj|d:\\vivodetailing\\autodetailingapp\\autodetailingapp\\views\\service\\service.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F47BC82E-4EAB-4667-B789-5B55212A3EE2}|AutoDetailingApp\\AutoDetailingApp.csproj|solutionrelative:autodetailingapp\\views\\service\\service.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F47BC82E-4EAB-4667-B789-5B55212A3EE2}|AutoDetailingApp\\AutoDetailingApp.csproj|d:\\vivodetailing\\autodetailingapp\\autodetailingapp\\controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F47BC82E-4EAB-4667-B789-5B55212A3EE2}|AutoDetailingApp\\AutoDetailingApp.csproj|solutionrelative:autodetailingapp\\controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -18,11 +22,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "Service.cshtml",
+              "DocumentMoniker": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\Views\\Service\\Service.cshtml",
+              "RelativeDocumentMoniker": "AutoDetailingApp\\Views\\Service\\Service.cshtml",
+              "ToolTip": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\Views\\Service\\Service.cshtml",
+              "RelativeToolTip": "AutoDetailingApp\\Views\\Service\\Service.cshtml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAADQAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-24T18:38:54.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\Program.cs",
               "RelativeDocumentMoniker": "AutoDetailingApp\\Program.cs",
@@ -34,7 +51,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ServiceController.cs",
               "DocumentMoniker": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\Controllers\\ServiceController.cs",
               "RelativeDocumentMoniker": "AutoDetailingApp\\Controllers\\ServiceController.cs",
