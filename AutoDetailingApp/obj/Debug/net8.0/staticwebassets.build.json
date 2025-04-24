@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HxpaDSRKPtA5yJf05C/RMPNPT596LUjlOwHGIgRbKlw=",
+  "Hash": "KvJtP+Xt63QV54cr9dsjsKytnjB9qARqLM8QwedgQQY=",
   "Source": "AutoDetailingApp",
   "BasePath": "_content/AutoDetailingApp",
   "Mode": "Default",
@@ -1317,6 +1317,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AutoDetailingApp.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\css\\contacts.css",
+      "SourceId": "AutoDetailingApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\",
+      "BasePath": "_content/AutoDetailingApp",
+      "RelativePath": "css/contacts#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "whl2wnebcp",
+      "Integrity": "VFVa8mmZpYpQt9RJvWjoHirwbP0brrBcg/ZGHFme6DM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\contacts.css"
     },
     {
       "Identity": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\css\\index.css",
@@ -2825,6 +2846,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-fwPtBwXQ0t2opGEmuxu+hqc4DmK0rStlinIpmM9VRk4="
+        }
+      ]
+    },
+    {
+      "Route": "css/contacts.css",
+      "AssetFile": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\css\\contacts.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6189"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VFVa8mmZpYpQt9RJvWjoHirwbP0brrBcg/ZGHFme6DM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 20:53:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VFVa8mmZpYpQt9RJvWjoHirwbP0brrBcg/ZGHFme6DM="
+        }
+      ]
+    },
+    {
+      "Route": "css/contacts.whl2wnebcp.css",
+      "AssetFile": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\css\\contacts.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6189"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VFVa8mmZpYpQt9RJvWjoHirwbP0brrBcg/ZGHFme6DM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 20:53:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "whl2wnebcp"
+        },
+        {
+          "Name": "label",
+          "Value": "css/contacts.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VFVa8mmZpYpQt9RJvWjoHirwbP0brrBcg/ZGHFme6DM="
         }
       ]
     },

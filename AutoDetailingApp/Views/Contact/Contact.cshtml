@@ -1,0 +1,60 @@
+﻿@*
+
+*@
+
+@section Styles{
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="~/css/contacts.css">
+}
+
+@{
+    ViewData["Title"] = "Контакти";
+}
+
+    <div class="main-page">
+        <h1>Контакти</h1>
+        <h2>Свържете се с нас!</h2>
+        <button>Локация</button>
+    </div>
+
+    <hr>
+
+    <div class="contacts-page">
+        <div class="contacts-info">
+            <button><i class="fas fa-phone"></i>&nbsp;0882 857 912</button>
+            <button><i class="fas fa-map-marker-alt"></i>&nbsp;гр. Пазарджик</button>
+            <button>vivadetailing@gmail.com</button>
+            <button><i class="fab fa-instagram"></i></button>
+        </div>
+    </div>
+    <div class="closing-page">
+        <div class="closing-content">
+            <div class="closing-text">
+                <h1>Всяка услуга предлагана от нас се изпълнява до последния детайл.</h1>
+                <h2>Елате и се убедете сами!</h2>
+            </div>
+
+            <div class="contact-form">
+                <h3>Свържи се с нас</h3>
+                <form class="compact-form">
+                    <div class="form-group">
+                        <input class="form-control" placeholder="Име">
+                        <span class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input" class="form-control" placeholder="Телефон">
+                        <span class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" placeholder="Имейл">
+                        <span class="text-danger"></span>
+                    </div>
+                    <div class="form-group full-width">
+                        <textarea class="form-control" rows="3" placeholder="Вашият въпрос..."></textarea>
+                        <span class="text-danger"></span>
+                    </div>
+                    <button type="submit" class="submit-btn">Изпрати</button>
+                </form>
+            </div>
+        </div>
+    </div>>
