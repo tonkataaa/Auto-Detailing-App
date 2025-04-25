@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\css\\index.css"
     },
     {
+      "Id": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
       "Id": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\css\\services.css",
       "PackagePath": "staticwebassets\\css\\services.css"
     },
@@ -31,6 +35,10 @@
     {
       "Id": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\images\\interiorDetailing1.jpg",
       "PackagePath": "staticwebassets\\images\\interiorDetailing1.jpg"
+    },
+    {
+      "Id": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\images\\login.background.jpg",
+      "PackagePath": "staticwebassets\\images\\login.background.jpg"
     },
     {
       "Id": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\js\\navigation.js",

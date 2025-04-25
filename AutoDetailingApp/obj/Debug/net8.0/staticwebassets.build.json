@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KvJtP+Xt63QV54cr9dsjsKytnjB9qARqLM8QwedgQQY=",
+  "Hash": "Ou2ShwewTJAGu3gUXRp6WoPaCe9W5HG33sQFWiRQCXA=",
   "Source": "AutoDetailingApp",
   "BasePath": "_content/AutoDetailingApp",
   "Mode": "Default",
@@ -1354,11 +1354,32 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "6a81n22nd8",
-      "Integrity": "Ln+GpDj6HDA7VG4XlsYawRMu39H4fosGiaVXaAkwl8c=",
+      "Fingerprint": "c0gi0e5fz4",
+      "Integrity": "dNapznsVzlbAEr9IhmoFkPIfwJW2QlfTl4msn4UQ5eg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\index.css"
+    },
+    {
+      "Identity": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\css\\login.css",
+      "SourceId": "AutoDetailingApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\",
+      "BasePath": "_content/AutoDetailingApp",
+      "RelativePath": "css/login#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "38dgwnp6vq",
+      "Integrity": "DW2GxeNdhe+b6zPGMWs/mIWT0hwkY4Q8/oycfIfEGd4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\login.css"
     },
     {
       "Identity": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\css\\services.css",
@@ -1464,6 +1485,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\interiorDetailing1.jpg"
+    },
+    {
+      "Identity": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\images\\login.background.jpg",
+      "SourceId": "AutoDetailingApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\",
+      "BasePath": "_content/AutoDetailingApp",
+      "RelativePath": "images/login.background#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "zn34e165n4",
+      "Integrity": "j/3s5Zm8kFxh/M2yZPT0AFueUYg341dsRabedQABOwE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\login.background.jpg"
     },
     {
       "Identity": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\js\\navigation.js",
@@ -2932,7 +2974,7 @@
       ]
     },
     {
-      "Route": "css/index.6a81n22nd8.css",
+      "Route": "css/index.c0gi0e5fz4.css",
       "AssetFile": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\css\\index.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2942,7 +2984,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5273"
+          "Value": "5434"
         },
         {
           "Name": "Content-Type",
@@ -2950,11 +2992,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Ln+GpDj6HDA7VG4XlsYawRMu39H4fosGiaVXaAkwl8c=\""
+          "Value": "\"dNapznsVzlbAEr9IhmoFkPIfwJW2QlfTl4msn4UQ5eg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 20:56:12 GMT"
+          "Value": "Fri, 25 Apr 2025 15:22:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2964,7 +3006,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "6a81n22nd8"
+          "Value": "c0gi0e5fz4"
         },
         {
           "Name": "label",
@@ -2972,7 +3014,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Ln+GpDj6HDA7VG4XlsYawRMu39H4fosGiaVXaAkwl8c="
+          "Value": "sha256-dNapznsVzlbAEr9IhmoFkPIfwJW2QlfTl4msn4UQ5eg="
         }
       ]
     },
@@ -2987,7 +3029,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5273"
+          "Value": "5434"
         },
         {
           "Name": "Content-Type",
@@ -2995,11 +3037,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Ln+GpDj6HDA7VG4XlsYawRMu39H4fosGiaVXaAkwl8c=\""
+          "Value": "\"dNapznsVzlbAEr9IhmoFkPIfwJW2QlfTl4msn4UQ5eg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 20:56:12 GMT"
+          "Value": "Fri, 25 Apr 2025 15:22:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3009,7 +3051,89 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Ln+GpDj6HDA7VG4XlsYawRMu39H4fosGiaVXaAkwl8c="
+          "Value": "sha256-dNapznsVzlbAEr9IhmoFkPIfwJW2QlfTl4msn4UQ5eg="
+        }
+      ]
+    },
+    {
+      "Route": "css/login.38dgwnp6vq.css",
+      "AssetFile": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\css\\login.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2332"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DW2GxeNdhe+b6zPGMWs/mIWT0hwkY4Q8/oycfIfEGd4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 25 Apr 2025 23:21:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "38dgwnp6vq"
+        },
+        {
+          "Name": "label",
+          "Value": "css/login.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DW2GxeNdhe+b6zPGMWs/mIWT0hwkY4Q8/oycfIfEGd4="
+        }
+      ]
+    },
+    {
+      "Route": "css/login.css",
+      "AssetFile": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\css\\login.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2332"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DW2GxeNdhe+b6zPGMWs/mIWT0hwkY4Q8/oycfIfEGd4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 25 Apr 2025 23:21:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-DW2GxeNdhe+b6zPGMWs/mIWT0hwkY4Q8/oycfIfEGd4="
         }
       ]
     },
@@ -5640,6 +5764,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-A/fgWkPKz2N96pGrUcQit/aWXi/Ch2IDXWaNGBMO45A="
+        }
+      ]
+    },
+    {
+      "Route": "images/login.background.jpg",
+      "AssetFile": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\images\\login.background.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "261012"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"j/3s5Zm8kFxh/M2yZPT0AFueUYg341dsRabedQABOwE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 12 Apr 2025 06:49:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-j/3s5Zm8kFxh/M2yZPT0AFueUYg341dsRabedQABOwE="
+        }
+      ]
+    },
+    {
+      "Route": "images/login.background.zn34e165n4.jpg",
+      "AssetFile": "D:\\VivoDetailing\\AutoDetailingApp\\AutoDetailingApp\\wwwroot\\images\\login.background.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "261012"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"j/3s5Zm8kFxh/M2yZPT0AFueUYg341dsRabedQABOwE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 12 Apr 2025 06:49:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zn34e165n4"
+        },
+        {
+          "Name": "label",
+          "Value": "images/login.background.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-j/3s5Zm8kFxh/M2yZPT0AFueUYg341dsRabedQABOwE="
         }
       ]
     },

@@ -1,10 +1,12 @@
 wwwroot\css\contacts.css
 wwwroot\css\index.css
+wwwroot\css\login.css
 wwwroot\css\services.css
 wwwroot\favicon.ico
 wwwroot\images\exteriorDetailing2.jpg
 wwwroot\images\Headlight-Resto-1.png
 wwwroot\images\interiorDetailing1.jpg
+wwwroot\images\login.background.jpg
 wwwroot\js\navigation.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
