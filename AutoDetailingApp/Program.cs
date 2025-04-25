@@ -8,12 +8,16 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<AutoDetailingDbContext>(options =>
 	options.UseSqlServer(connectionString));
+
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole<Guid>>()
 	.AddEntityFrameworkStores<AutoDetailingDbContext>()
 	.AddDefaultUI()
+	.AddSignInManager<SignInManager<ApplicationUser>>()
+	.AddUserManager<UserManager<ApplicationUser>>()
 	.AddDefaultTokenProviders();
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();

@@ -58,12 +58,20 @@ nav ul {
 		font-weight: bold;
 	}
 
-nav button {
+.login-link {
 	padding: 5px 10px;
-	cursor: pointer;
-	background-color: transparent;
 	color: white;
-	border: none;
+	background-color: transparent;
+	border: 2px solid white;
+	border-radius: 5px;
+	text-decoration: none;
+	font-weight: bold;
+	transition: all 0.3s ease;
+}
+
+.login-link:hover {
+		background-color: white;
+		color: black;
 }
 
 nav a i {

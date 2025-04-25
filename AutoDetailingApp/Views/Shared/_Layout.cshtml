@@ -24,7 +24,14 @@
                     <li><a  asp-area="" asp-controller="Contact" asp-action="Contact">Контакти</a></li>
                 </ul>
                 <div class="nav-actions">
-                    <button class="navbar-toggler" type="button" ><a href="login.html">Логин</a></button>
+                    @if (!User.Identity.IsAuthenticated)
+                    {
+                        <a class="login-link" asp-area="Identity" asp-page="/Account/Login">Логин</a>
+                    }
+                    else
+                    {
+                        <a class="login-link" asp-area="Identity" asp-page="/Account/Logout">Излез</a>
+                    }
                     <a href="https://www.instagram.com/vivodetailing/" target="_blank">
                         <i class="fab fa-instagram"></i>
                     </a>
