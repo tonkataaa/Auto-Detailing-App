@@ -1,7 +1,7 @@
 ﻿@page
 @model AutoDetailingApp.Areas.Identity.Pages.Account.RegisterModel
 @{
-    ViewData["Title"] = "Регистриране";
+    ViewData["Title"] = "Регистрация";
     Layout = null;
 }
 
@@ -10,23 +10,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link rel="stylesheet" href="~/css/register.css">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/register.css" />
 </head>
 <body>
     <div class="background-overlay"></div>
-    <form method="post">
+    <form method="post" asp-route-returnUrl="@Model.ReturnUrl">
         <div class="register-form">
             <h2>@ViewData["Title"]</h2>
-            <input type="Name" class="input-field" placeholder="First and last name">
-            <input type="Email" class="input-field" placeholder="Email">
-            <input type="password" class="input-field" placeholder="Enter your password">
-            <input type="confirm-password" class="input-field" placeholder="Confirm your password">
 
-            <button class="register-button">Register</button>
+            <ValidationSummary ModelOnly="true" class="text-danger" />
 
-            <p class="register-text">Already have an account? <a asp-area="Identity" asp-page="/Account/Login">Login</a></p>
-        </div>    
+            <input asp-for="Input.Username" class="input-field" placeholder="Име и фамилия" />
+            <ValidationMessage For="Input.Username" class="text-white" />
+
+            <input asp-for="Input.Email" class="input-field" placeholder="Имейл" />
+            <ValidationMessage For="Input.Email" class="text-white" />
+
+            <input asp-for="Input.Password" class="input-field" placeholder="Парола" />
+            <ValidationMessage For="Input.Password" class="text-white" />
+
+            <input asp-for="Input.ConfirmPassword" class="input-field" placeholder="Потвърди парола" />
+            <ValidationMessage For="Input.ConfirmPassword" class="text-white" />
+
+            <button type="submit" class="register-button">Регистрация</button>
+
+            <div class="register-text">
+                <p>Вече имате акаунт? <a asp-area="Identity" asp-page="/Account/Login">Вход</a></p>
+            </div>
+        </div>
     </form>
 
     <div class="footer">

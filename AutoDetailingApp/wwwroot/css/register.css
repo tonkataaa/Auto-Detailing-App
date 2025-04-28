@@ -92,9 +92,9 @@ body {
 	transition: bakcground-color 0.3s;
 }
 
-	.register-button:hover {
+.register-button:hover{
 		background-color: #0056b3;
-	}
+}
 
 
 
@@ -107,18 +107,18 @@ body {
 
 .register-text {
 	text-align: center;
-	color: #666;
+	color: #666666ce;
 }
 
-	.register-text a {
-		color: #007bff;
-		text-decoration: none;
-		font-weight: bold;
-	}
+.register-text a {
+	color: #007bff;
+	text-decoration: none;
+	font-weight: bold;
+}
 
-		.register-text a:hover {
-			text-decoration: underline;
-		}
+.register-text a:hover {
+	text-decoration: underline;
+}
 
 .footer {
 	text-align: center;
