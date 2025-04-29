@@ -1,5 +1,5 @@
 ﻿@page
-@model LoginModel
+@model AutoDetailingApp.Web.ViewModels.Account.LoginViewModel
 @{
     ViewData["Title"] = "Логин";
     Layout = null;
@@ -17,14 +17,14 @@
     <div class="background-overlay"></div>
     <div class="login-form">
         <h2>Login</h2>
-        <form method="post">
-            <input type="email" class="input-field" placeholder="Enter your email">
-            <input type="password" class="input-field" placeholder="Enter your password">       
+        <form asp-controller ="AccountController" asp-action="Login" method="post">
+            <input asp-for = "Email" type="email" class="input-field" placeholder="Enter your email">
+            <input asp-for = "Password" type="password" class="input-field" placeholder="Enter your password">       
         </form>
 
         <div class="options">
             <label>
-                <input asp-for = "Input.RememberMe" type="checkbox"> Remember me
+                <input asp-for = "RememberMe" type="checkbox"> Remember me
             </label>
 
             <p><a asp-page="/Account/ForgotPassword">Forgot password?</a></p>

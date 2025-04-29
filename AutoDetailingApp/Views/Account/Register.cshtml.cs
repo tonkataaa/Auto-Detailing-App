@@ -1,7 +1,7 @@
 ﻿
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace AutoDetailingApp.Areas.Identity.Pages.Account
+namespace AutoDetailingApp.Views.Account
 {
 	using System.ComponentModel.DataAnnotations;
 

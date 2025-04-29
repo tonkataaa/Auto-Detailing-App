@@ -23,6 +23,7 @@
 	<ItemGroup>
 		<ProjectReference Include="..\AutoDetailingApp.Common\AutoDetailingApp.Common.csproj" />
 		<ProjectReference Include="..\AutoDetailingApp.Models\AutoDetailingApp.Models.csproj" />
+		<ProjectReference Include="..\AutoDetailingApp.Web.ViewModels\AutoDetailingApp.Web.ViewModels.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
