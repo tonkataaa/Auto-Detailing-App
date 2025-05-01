@@ -5,11 +5,11 @@ namespace AutoDetailingApp.Web.ViewModels
 
 	using AutoDetailingApp.Common;
 
-	public class ServiceFormModel
+	public class ContactFormModel
 	{
 		[Required]
-		[MinLength(EntityValidationConstants.Service.NameMinLength)]
-		[MaxLength(EntityValidationConstants.Service.NameMaxLength)]
+		[MinLength(EntityValidationConstants.ContactRequest.NameMinLength)]
+		[MaxLength(EntityValidationConstants.ContactRequest.NameMaxLength)]
 		public string Name { get; set; }
 
 		[Required]
@@ -19,8 +19,8 @@ namespace AutoDetailingApp.Web.ViewModels
 		public string Email { get; set; }
 
 		[Required]
-		[MinLength(EntityValidationConstants.Service.QuestionMinLength)]
-		[MaxLength(EntityValidationConstants.Service.QuestionMaxLength)]
+		[MinLength(EntityValidationConstants.ContactRequest.QuestionMinLength)]
+		[MaxLength(EntityValidationConstants.ContactRequest.QuestionMaxLength)]
 		public string Question { get; set; }
 	}
 }

@@ -28,11 +28,14 @@
 
 		public static class ContactRequest
 		{
-			public const int FullNameMaxLength = 200;
+			public const int NameMinLength = 3;
+			public const int NameMaxLength = 50;
+
+			public const int QuestionMinLength = 5;
+			public const int QuestionMaxLength = 300;
+
 			public const int EmailMaxLength = 200;
 			public const int PhoneNumberMaxLength = 20;
-			public const int MessageMaxLength = 500;
-
 		}
 
 		public static class Appointment
