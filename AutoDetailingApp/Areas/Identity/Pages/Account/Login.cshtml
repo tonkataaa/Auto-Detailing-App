@@ -1,5 +1,6 @@
 ﻿@page
-@model AutoDetailingApp.Web.ViewModels.Account.LoginViewModel
+@model AutoDetailingApp.Areas.Identity.Pages.Account.LoginModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     ViewData["Title"] = "Логин";
     Layout = null;
@@ -17,14 +18,16 @@
     <div class="background-overlay"></div>
     <div class="login-form">
         <h2>Login</h2>
-        <form asp-controller ="AccountController" asp-action="Login" method="post">
-            <input asp-for = "Email" type="email" class="input-field" placeholder="Enter your email">
-            <input asp-for = "Password" type="password" class="input-field" placeholder="Enter your password">       
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <input asp-for = "Input.Email" type="email" class="input-field" placeholder="Enter your email">
+            <input asp-for = "Input.Password" type="password" class="input-field" placeholder="Enter your password">       
         </form>
 
         <div class="options">
             <label>
-                <input asp-for = "RememberMe" type="checkbox"> Remember me
+                <input asp-for = "Input.RememberMe" type="checkbox"> Remember me
             </label>
 
             <p><a asp-page="/Account/ForgotPassword">Forgot password?</a></p>
@@ -32,7 +35,10 @@
 
         <button type = "submit" class="login-button">Log In</button>
 
-        <p class="register-text">Don't have an account? <a asp-area="Identity" asp-page="/Account/Register">Register</a></p>
+        <p class="register-text">
+            Don't have an account?
+            <a asp-area="Identity" asp-page="/Account/Register">Register</a>
+        </p>
     </div>
 
     <div class="footer">

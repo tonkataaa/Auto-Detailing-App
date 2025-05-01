@@ -1,0 +1,59 @@
+﻿@page
+@model AutoDetailingApp.Views.Account.RegisterModel
+@* DEBUG: THIS IS THE CORRECT FILE *@
+@{
+    ViewData["Title"] = "Регистрация";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/register.css" asp-append-version="true"/>
+</head>
+<body>
+    <div class="background-overlay"></div>
+
+    <form method="post">
+        <div class="register-form">
+            <h2>@ViewData["Title"]</h2>
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <input asp-for="Input.Username" class="input-field" placeholder="Потребителско име" />
+            <span asp-validation-for="Input.Username" class="text-danger"></span>
+
+            <input asp-for="Input.Email" class="input-field" placeholder="Имейл" />
+            <span asp-validation-for="Input.Email" class="text-danger"></span>
+
+            <input asp-for="Input.PhoneNumber" class="input-field" placeholder="Телефонен номер" />
+            <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+
+            <input asp-for="Input.Password" type="password" class="input-field" placeholder="Парола" />
+            <span asp-validation-for="Input.Password" class="text-danger"></span>
+
+            <input asp-for="Input.ConfirmPassword" type="password" class="input-field" placeholder="Потвърди парола" />
+            <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+
+            <button type="submit" class="register-button">Регистрация</button>
+
+            <div class="register-text">
+                <p>Вече имате акаунт? <a asp-area="Identity" asp-page="/Account/Login">Вход</a></p>
+            </div>
+        </div>
+    </form>
+
+    <div class="footer">
+        <footer>
+            <p>All rights reserved &copy;</p>
+        </footer>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>
