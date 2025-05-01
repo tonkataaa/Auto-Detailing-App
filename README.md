@@ -1,21 +1,21 @@
-# VivoDetailing Reservation System 🚗💦
+# VivoDetailing🚗💦
 
-## 🌐 Достъп до приложението
-Сайтът е достъпен на:  
+## 🌐 Access for the app
+You can check it at:  
 🔗 TBD
 
-## 📌 Основна функционалност
-- 👤 Потребителска регистрация и автентикация
-- 🗓️ Система за резервации с календар
-- 📱 Адаптивен дизайн за всички устройства
-- 📧 Известия по имейл за потвърждение
+## 📌 Main features
+- 👤 User registration and authentication 
+- 🗓️ Reservation system with calendar
+- 📱 Responsive design for all devices
+- 📧 Email notifications for confirmation
 
-## 🛠 Технологичен стек
+## 🛠 Technology stack
 - **Backend**: .NET 8, ASP.NET MVC
 - **Frontend**: HTML5, CSS3, JavaScript (ES6+)
 - **Database**: MS SQL
 - **Hosting**: TBD
 
 
-*© 2024 VivoDetailing - Всички права запазени*
+*© 2024 VivoDetailing - All rights reserved*
 
