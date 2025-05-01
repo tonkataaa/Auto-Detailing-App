@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoDetailingApp.Models", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoDetailingApp.Common", "AutoDetailingApp.Common\AutoDetailingApp.Common.csproj", "{C1B6B0A4-F42B-478E-8DFE-9C87408E13CF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoDetailingApp.Web.ViewModels", "AutoDetailingApp.Web.ViewModels\AutoDetailingApp.Web.ViewModels.csproj", "{04D93AC0-EFB7-4F6D-A3CE-F28479EBA766}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,9 +31,16 @@ Global
 		{C1B6B0A4-F42B-478E-8DFE-9C87408E13CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1B6B0A4-F42B-478E-8DFE-9C87408E13CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1B6B0A4-F42B-478E-8DFE-9C87408E13CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04D93AC0-EFB7-4F6D-A3CE-F28479EBA766}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04D93AC0-EFB7-4F6D-A3CE-F28479EBA766}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04D93AC0-EFB7-4F6D-A3CE-F28479EBA766}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04D93AC0-EFB7-4F6D-A3CE-F28479EBA766}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F47BC82E-4EAB-4667-B789-5B55212A3EE2} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {78DFFA72-8556-4DBB-A43F-89837B438EB3}

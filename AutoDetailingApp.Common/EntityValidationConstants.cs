@@ -9,12 +9,18 @@
 			public const int PhoneNumberMaxLength = 20;
 			public const int PasswordHashMaxLength = 128;
 			public const int RoleMaxLength = 50;
-			
+
 
 		}
 
 		public static class Service
 		{
+			public const int NameMinLength = 3;
+			public const int NameMaxLength = 50;
+
+			public const int QuestionMinLength = 5;
+			public const int QuestionMaxLength = 300;
+
 			public const int NameMaxLength = 250;
 			public const int DescriptionMaxLength = 500;
 
