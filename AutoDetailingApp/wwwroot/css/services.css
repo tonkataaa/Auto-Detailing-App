@@ -161,6 +161,12 @@ nav a i {
 	box-shadow: 0 0 20px rgba(0, 170, 255, 0.2);
 }
 
+.service-section video {
+	width: 400px;
+	border-radius: 12px;
+	box-shadow: 0 0 20px rgba(0, 170, 255, 0.2);
+}
+
 /* Optional: Responsive fix */
 @media (max-width: 768px) {
 	.service-section {
