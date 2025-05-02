@@ -1,7 +1,10 @@
+using System.Globalization;
+
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using AutoDetailingApp.Data;
 using AutoDetailingApp.Models;
+using Microsoft.AspNetCore.Localization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,16 +14,30 @@ builder.Services.AddDbContext<AutoDetailingDbContext>(options =>
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-builder.Services.AddIdentity<ApplicationUser, IdentityRole<Guid>>()
-	.AddEntityFrameworkStores<AutoDetailingDbContext>()
-	.AddDefaultUI()
-	.AddSignInManager<SignInManager<ApplicationUser>>()
-	.AddUserManager<UserManager<ApplicationUser>>()
-	.AddDefaultTokenProviders();
+builder.Services.AddIdentity<ApplicationUser, IdentityRole<Guid>>(options =>
+{
+	options.Password.RequireDigit = true;
+	options.Password.RequiredLength = 12;               
+	options.Password.RequireNonAlphanumeric = true;    
+	options.Password.RequireUppercase = true;          
+	options.Password.RequireLowercase = true;          
+})
+.AddEntityFrameworkStores<AutoDetailingDbContext>()
+.AddDefaultUI()
+.AddSignInManager<SignInManager<ApplicationUser>>()
+.AddUserManager<UserManager<ApplicationUser>>()
+.AddDefaultTokenProviders();
 
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+app.UseRequestLocalization(new RequestLocalizationOptions
+{
+	DefaultRequestCulture = new RequestCulture("bg-BG"),
+	SupportedCultures = new[] { new CultureInfo("bg-BG") },
+	SupportedUICultures = new[] { new CultureInfo("bg-BG") }
+});
 
 if (app.Environment.IsDevelopment())
 {

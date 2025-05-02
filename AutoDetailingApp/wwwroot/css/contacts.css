@@ -269,7 +269,6 @@ hr {
 	grid-template-columns: repeat(3, 1fr);
 	gap: 15px;
 	margin-bottom: 15px;
-	/
 }
 
 .form-group {
@@ -325,11 +324,32 @@ hr {
 	margin-top: 10px;
 	text-transform: uppercase;
 	font-weight: bold;
+	text-decoration: none;
 }
 
 	.submit-btn:hover {
 		background-color: hsl(243, 100%, 31%);
 	}
+
+
+.success-message {
+	background-color: rgba(72, 207, 128, 0.9); /* Светло зелено */
+	color: white;
+	padding: 15px;
+	border-radius: 8px;
+	font-size: 1.2rem;
+	text-align: center;
+	margin-bottom: 20px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+	transition: opacity 0.3s ease;
+}
+
+	/* Success message when hidden */
+	.success-message.hidden {
+		opacity: 0;
+		visibility: hidden;
+	}
+
 
 /*Footer start*/
 footer {

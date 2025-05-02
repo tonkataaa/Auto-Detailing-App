@@ -15,8 +15,8 @@ namespace AutoDetailingApp.Data.Configurations
 			builder
 				.Property(cr => cr.FullName)
 				.IsRequired()
-				.HasMaxLength(EntityValidationConstants.ContactRequest.FullNameMaxLength)
-				.HasColumnType($"NVARCHAR({EntityValidationConstants.ContactRequest.FullNameMaxLength})");
+				.HasMaxLength(EntityValidationConstants.ContactRequest.NameMaxLength)
+				.HasColumnType($"NVARCHAR({EntityValidationConstants.ContactRequest.NameMaxLength})");
 
 			builder
 				.Property(cr => cr.Email)
@@ -33,8 +33,8 @@ namespace AutoDetailingApp.Data.Configurations
 			builder
 				.Property(cr => cr.Message)
 				.IsRequired()
-				.HasMaxLength(EntityValidationConstants.ContactRequest.MessageMaxLength)
-				.HasColumnType($"NVARCHAR({EntityValidationConstants.ContactRequest.MessageMaxLength})");
+				.HasMaxLength(EntityValidationConstants.ContactRequest.QuestionMinLength)
+				.HasColumnType($"NVARCHAR({EntityValidationConstants.ContactRequest.QuestionMaxLength})");
 
 			builder
 				.Property(cr => cr.CreatedAt)
