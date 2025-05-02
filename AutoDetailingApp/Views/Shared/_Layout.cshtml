@@ -29,9 +29,11 @@
                     }
                     else
                     {
-                        <a class="login-link" asp-area="Identity" asp-page="/Account/Logout">Излез</a>
+                        <form method="post" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="/" id="logoutForm" class="d-inline">
+                            <button type="submit" class="login-link btn btn-link" style="padding: 0; border: none; background: none;">Излез</button>
+                        </form>
                     }
-                    <a href="reservation.html" class="login-link">РЕЗЕРВИРАЙ ЧАС</a>
+                    <a asp-area = "" asp-controller = "Reservation" asp-action = "Reservation" href="reservation.html" class="login-link">РЕЗЕРВИРАЙ ЧАС</a>
                     <a href="https://www.instagram.com/vivodetailing/" target="_blank">
                         <i class="fab fa-instagram"></i>
                     </a>

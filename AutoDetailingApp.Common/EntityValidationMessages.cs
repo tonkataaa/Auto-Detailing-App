@@ -28,5 +28,14 @@ namespace AutoDetailingApp.Common
 			public const string QuestionMaxMessage = "Въпросът не може да бъде повече от {1} символа.";
 
 		}
+
+        public static class User
+        {
+			public const string NameRequiredMessage = "Моля въведете име!";
+			public const string EmailRequiredMessage = "Моля въведете имейл!";
+			public const string PhoneNumberRequiredMessage = "Моля въведете телефонен номер!";
+			public const string PasswordRequiredMessage = "Моля въведете парола!";
+
+		}
     }
 }

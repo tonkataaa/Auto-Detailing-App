@@ -28,7 +28,7 @@ public class AutoDetailingDbContext : IdentityDbContext<ApplicationUser, Identit
 
     public virtual DbSet<Service> Services { get; set; } = null!;
 
-    public virtual DbSet<User> Users { get; set; } = null!;
+    public virtual DbSet<ClientUser> ClientUsers { get; set; } = null!;
 
 	protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 	{

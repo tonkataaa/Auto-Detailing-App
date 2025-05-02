@@ -10,6 +10,7 @@ namespace AutoDetailingApp.Views.Account
 	using Microsoft.AspNetCore.Mvc.RazorPages;
 
 	using AutoDetailingApp.Models;
+	using AutoDetailingApp.Common;
 
 	public class RegisterModel : PageModel
 	{
@@ -53,18 +54,22 @@ namespace AutoDetailingApp.Views.Account
 			///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
 			///     directly from your code. This API may change or be removed in future releases.
 			/// </summary>
-			[Required]
-			[EmailAddress]
+			[Required(ErrorMessage = EntityValidationMessages.User.EmailRequiredMessage)]
+			[EmailAddress(ErrorMessage = EntityValidationMessages.User.EmailRequiredMessage)]
+			[StringLength(EntityValidationConstants.User.EmailMaxLength, ErrorMessage = "Имейлът трябва да бъде поне {0} и максимум {1} символа.", MinimumLength = EntityValidationConstants.User.EmailMinLength)]
 			[Display(Name = "Имейл")]
 			public string Email { get; set; }
 
-			[Required]
-			[StringLength(50, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 3)]
+			[Required(ErrorMessage = EntityValidationMessages.User.NameRequiredMessage)]
+			[StringLength(EntityValidationConstants.User.FullNameMaxLength, ErrorMessage = "Името трябва да бъде поне {2} и максимум {1} символа.", MinimumLength = EntityValidationConstants.User.FullNameMinLength)]
 			[Display(Name = "Потребителско име")]
 			public string Username { get; set; }
 
-			[Required]
-			[Phone]
+
+
+			[Required(ErrorMessage = EntityValidationMessages.User.PhoneNumberRequiredMessage)]
+			[Phone(ErrorMessage = EntityValidationMessages.User.PhoneNumberRequiredMessage)]
+			[StringLength(EntityValidationConstants.User.PhonenumberMinLength, ErrorMessage = "Телефонният номер трябва да бъде поне 10 и максимум 15 символа.", MinimumLength = EntityValidationConstants.User.PhonenumberMinLength)]
 			[Display(Name = "Телефонен номер")]
 			public string PhoneNumber { get; set; }
 
@@ -72,8 +77,8 @@ namespace AutoDetailingApp.Views.Account
 			///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
 			///     directly from your code. This API may change or be removed in future releases.
 			/// </summary>
-			[Required]
-			[StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+			[Required(ErrorMessage = EntityValidationMessages.User.PasswordRequiredMessage)]
+			[StringLength(EntityValidationConstants.User.PasswordMaxLength, ErrorMessage = "Паролата трябва да бъде поне {2} и максимум {1} символа.", MinimumLength = EntityValidationConstants.User.PasswordMinLength)]
 			[DataType(DataType.Password)]
 			[Display(Name = "Парола")]
 			public string Password { get; set; }

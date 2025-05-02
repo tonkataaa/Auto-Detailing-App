@@ -4,13 +4,17 @@
 	{
 		public static class User
 		{
-			public const int FullNameMaxLength = 200;
-			public const int EmailMaxLength = 200;
-			public const int PhoneNumberMaxLength = 20;
-			public const int PasswordHashMaxLength = 128;
-			public const int RoleMaxLength = 50;
+			public const int FullNameMinLength = 5;
+			public const int FullNameMaxLength = 30;
 
+			public const int EmailMinLength = 3;
+			public const int EmailMaxLength = 320;
 
+			public const int PasswordMinLength = 8;
+			public const int PasswordMaxLength = 64;
+
+			public const int PhonenumberMinLength = 10;
+			public const int PhoneNumberMaxLength = 15;
 		}
 
 		public static class Service

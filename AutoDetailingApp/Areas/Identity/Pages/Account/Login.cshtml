@@ -23,17 +23,17 @@
 
             <input asp-for = "Input.Email" type="email" class="input-field" placeholder="Enter your email">
             <input asp-for = "Input.Password" type="password" class="input-field" placeholder="Enter your password">       
+            <div class="options">
+                <label>
+                    <input asp-for = "Input.RememberMe" type="checkbox"> Remember me
+                </label>
+
+                <p><a asp-page="/Account/ForgotPassword">Forgot password?</a></p>
+            </div>
+
+            <button type = "submit" class="login-button">Log In</button>
         </form>
 
-        <div class="options">
-            <label>
-                <input asp-for = "Input.RememberMe" type="checkbox"> Remember me
-            </label>
-
-            <p><a asp-page="/Account/ForgotPassword">Forgot password?</a></p>
-        </div>
-
-        <button type = "submit" class="login-button">Log In</button>
 
         <p class="register-text">
             Don't have an account?

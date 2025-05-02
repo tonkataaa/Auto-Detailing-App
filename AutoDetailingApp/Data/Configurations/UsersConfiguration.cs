@@ -5,10 +5,10 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace AutoDetailingApp.Data.Configurations
 {
-	public class UsersConfiguration : IEntityTypeConfiguration<User>
+	public class UsersConfiguration : IEntityTypeConfiguration<ClientUser>
 	{
 
-		public void Configure(EntityTypeBuilder<User> builder)
+		public void Configure(EntityTypeBuilder<ClientUser> builder)
 		{
 			builder
 				.HasKey(t => t.Id);
@@ -16,31 +16,31 @@ namespace AutoDetailingApp.Data.Configurations
 			builder
 				.Property(t => t.FullName)
 				.IsRequired()
-				.HasMaxLength(EntityValidationConstants.User.FullNameMaxLength)
-				.HasColumnType($"NVARCHAR({EntityValidationConstants.User.FullNameMaxLength})");
+				.HasMaxLength(50)
+				.HasColumnType($"NVARCHAR({50})");
 
 			builder
 				.Property(t => t.Email)
 				.IsRequired()
-				.HasMaxLength(EntityValidationConstants.User.EmailMaxLength)
-				.HasColumnType($"NVARCHAR({EntityValidationConstants.User.EmailMaxLength})");
+				.HasMaxLength(320)
+				.HasColumnType($"NVARCHAR({320})");
 
 			builder
 				.Property(t => t.PhoneNumber)
 				.IsRequired()
-				.HasMaxLength(EntityValidationConstants.User.PhoneNumberMaxLength)
-				.HasColumnType($"NVARCHAR({EntityValidationConstants.User.PhoneNumberMaxLength})");
+				.HasMaxLength(20)
+				.HasColumnType($"NVARCHAR({20})");
 
 			builder
 				.Property(t => t.PasswordHash)
 				.IsRequired()
-				.HasMaxLength(EntityValidationConstants.User.PasswordHashMaxLength)
-				.HasColumnType($"NVARCHAR({EntityValidationConstants.User.PasswordHashMaxLength})");
+				.HasMaxLength(128)
+				.HasColumnType($"NVARCHAR({128})");
 
 			builder
 				.Property(t => t.Role)
-				.HasMaxLength(EntityValidationConstants.User.RoleMaxLength)
-				.HasColumnType($"NVARCHAR({EntityValidationConstants.User.RoleMaxLength})");
+				.HasMaxLength(50)
+				.HasColumnType($"NVARCHAR({50})");
 
 			builder
 				.Property(t => t.CreatedAt)

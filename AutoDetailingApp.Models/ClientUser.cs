@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace AutoDetailingApp.Models
 {
-    public class User
+    public class ClientUser
     {
-		public User()
+		public ClientUser()
 		{
 			this.Id = Guid.NewGuid();
 			this.Appointments = new HashSet<Appointment>();
