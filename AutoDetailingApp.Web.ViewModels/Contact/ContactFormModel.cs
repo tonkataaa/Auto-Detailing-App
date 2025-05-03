@@ -4,29 +4,31 @@ namespace AutoDetailingApp.Web.ViewModels
 	using System.ComponentModel.DataAnnotations;
 
 	using AutoDetailingApp.Common;
+	using static AutoDetailingApp.Common.EntityValidationMessages.Contact;
+	using static AutoDetailingApp.Common.EntityValidationConstants.ContactRequest;
 
 	public class ContactFormModel
 	{
-		[Required(ErrorMessage = EntityValidationMessages.Contact.NameRequiredMessage)]
-		[MinLength(EntityValidationConstants.ContactRequest.NameMinLength, ErrorMessage = EntityValidationMessages.Contact.NameMinMessage)]
-		[MaxLength(EntityValidationConstants.ContactRequest.NameMaxLength, ErrorMessage = EntityValidationMessages.Contact.NameMaxMessage)]
+		[Required(ErrorMessage = NameRequiredMessage)]
+		[MinLength(NameMinLength, ErrorMessage = NameMinMessage)]
+		[MaxLength(NameMaxLength, ErrorMessage = NameMaxMessage)]
 		public string Name { get; set; }
 
 		[Required]
-		[Phone(ErrorMessage = EntityValidationMessages.Contact.PhoneNumberRequiredMessage)]
-		[MinLength(EntityValidationConstants.ContactRequest.PhonenumberMinLength, ErrorMessage = EntityValidationMessages.Contact.PhoneNumberMinMessage)]
-		[MaxLength(EntityValidationConstants.ContactRequest.PhoneNumberMaxLength, ErrorMessage = EntityValidationMessages.Contact.PhoneNumberMaxMessage)]
+		[Phone(ErrorMessage = PhoneNumberRequiredMessage)]
+		[MinLength(PhonenumberMinLength, ErrorMessage = PhoneNumberMinMessage)]
+		[MaxLength(PhoneNumberMaxLength, ErrorMessage = PhoneNumberMaxMessage)]
 		public string PhoneNumber { get; set; }
 
 		[Required]
 		[EmailAddress(ErrorMessage = EntityValidationMessages.Contact.EmailRequiredMessage)]
-		[MinLength(EntityValidationConstants.ContactRequest.EmailMinLength, ErrorMessage = EntityValidationMessages.Contact.EmailMinMessage)]
-		[MaxLength(EntityValidationConstants.ContactRequest.EmailMaxLength, ErrorMessage = EntityValidationMessages.Contact.EmailMaxMessage)]
+		[MinLength(EmailMinLength, ErrorMessage = EmailMinMessage)]
+		[MaxLength(EmailMaxLength, ErrorMessage = EmailMaxMessage)]
 		public string Email { get; set; }
 
 		[Required(ErrorMessage = EntityValidationMessages.Contact.NameRequiredMessage)]
-		[MinLength(EntityValidationConstants.ContactRequest.QuestionMinLength, ErrorMessage = EntityValidationMessages.Contact.QuestionMinMessage)]
-		[MaxLength(EntityValidationConstants.ContactRequest.QuestionMaxLength, ErrorMessage = EntityValidationMessages.Contact.QuestionMaxMessage)]
+		[MinLength(QuestionMinLength, ErrorMessage = QuestionMinMessage)]
+		[MaxLength(QuestionMaxLength, ErrorMessage = QuestionMaxMessage)]
 		public string Question { get; set; }
 
 
