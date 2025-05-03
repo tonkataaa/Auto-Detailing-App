@@ -37,5 +37,26 @@ namespace AutoDetailingApp.Common
 			public const string PasswordRequiredMessage = "Моля въведете парола!";
 
 		}
+
+        public static class Reservation
+        {
+			public const string NameRequiredMessage = "Моля въведете име!";
+			public const string EmailRequiredMessage = "Моля въведете имейл!";
+			public const string PhoneNumberRequiredMessage = "Моля въведете телефонен номер!";
+			public const string ServiceRequiredMessage = "Моля изберете услуга!";
+			public const string PasswordRequiredMessage = "Моля въведете парола!";
+
+			public const string NameMinMessage = "Името трябва да е поне {1} символа.";
+			public const string NameMaxMessage = "Името не може да бъде повече от {1} символа.";
+
+			public const string PhoneNumberMinMessage = "Телефонният номер трябва да е поне {1} символа.";
+			public const string PhoneNumberMaxMessage = "Телефонният номер не може да бъде повече от {1} символа.";
+
+			public const string EmailMinMessage = "Имейлът трябва да е поне {1} символа.";
+			public const string EmailMaxMessage = "Имейлът не може да бъде повече от {1} символа.";
+
+			public const string CommentMinMessage = "Въпросът трябва да е поне {1} символа.";
+			public const string CommentMaxMessage = "Въпросът не може да бъде повече от {1} символа.";
+		}
     }
 }

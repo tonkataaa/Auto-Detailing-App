@@ -54,6 +54,20 @@
 			public const int StatusMaxLength = 30;
 		}
 
+		public static class Reservation
+		{
+			public const int NameMinLength = 3;
+			public const int NameMaxLength = 50;
+
+			public const int EmailMinLength = 3;
+			public const int EmailMaxLength = 320;
+
+			public const int PhonenumberMinLength = 10;
+			public const int PhoneNumberMaxLength = 15;
+
+			public const int CommentMinLength = 5;
+			public const int CommentMaxLength = 300;
+		}
 	}
 }
 
