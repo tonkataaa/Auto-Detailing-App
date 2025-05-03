@@ -1,0 +1,44 @@
+﻿@*
+
+*@
+
+@section Styles{
+    <link rel="stylesheet" href="~/css/reservation.css" asp-append-version="true">
+
+}
+
+@{
+    ViewData["Title"] = "Резервирай час";
+}
+
+<div class="background image"></div>
+<div class="reservation-main">
+    <div class="reservation-form">
+        <h2>Запиши час за детайлинг</h2>
+        <form class="booking-form">
+            <label> Име и фамилия:</label>
+            <input type="text" placeholder="Вашето име" required>
+
+            <label>Телефон за връзка:</label>
+            <input type="tel" placeholder="+359XXXXXXXXX" required>
+
+            <label>Дата и час:</label>
+            <input type="datetime-local" required>
+
+            <label>Тип услуга:</label>
+            <select required>
+                <option value="">Избери услуга</option>
+                <option>Въшно почистване</option>
+                <option>Вътрешно почистване</option>
+                <option>Полиране на фарове</option>
+                <option>Пълна програма</option>
+            </select>
+
+            <label>Коментар:</label>
+            <textarea rows="3" placeholder="Допълнителна информация..."></textarea>
+
+            <button type="submit">Резервирай</button>
+        </form>
+
+    </div>
+</div>
