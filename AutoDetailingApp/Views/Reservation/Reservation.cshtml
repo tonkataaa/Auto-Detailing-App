@@ -1,6 +1,8 @@
-﻿@*
+﻿@using AutoDetailingApp.Web.ViewModels
+@using AutoDetailingApp.Web.ViewModels.Reservation
 
-*@
+
+@model ReservationFormModel
 
 @section Styles{
     <link rel="stylesheet" href="~/css/reservation.css" asp-append-version="true">
@@ -17,16 +19,16 @@
         <h2>Запиши час за детайлинг</h2>
         <form class="booking-form">
             <label> Име и фамилия:</label>
-            <input type="text" placeholder="Вашето име" required>
+            <input asp-for = "FullName" type="text" placeholder="Вашето име" required>
 
             <label>Телефон за връзка:</label>
-            <input type="tel" placeholder="+359XXXXXXXXX" required>
+            <input asp-for = "PhoneNumber" type="tel" placeholder="+359XXXXXXXXX" required>
 
             <label>Дата и час:</label>
-            <input type="datetime-local" required>
+            <input asp-for = "DateForReservation" type="datetime-local" required>
 
             <label>Тип услуга:</label>
-            <select required>
+            <select required asp-for="Service">
                 <option value="">Избери услуга</option>
                 <option>Въшно почистване</option>
                 <option>Вътрешно почистване</option>
@@ -35,7 +37,7 @@
             </select>
 
             <label>Коментар:</label>
-            <textarea rows="3" placeholder="Допълнителна информация..."></textarea>
+            <textarea rows="3" placeholder="Допълнителна информация..." asp-for="Comment"></textarea>
 
             <button type="submit">Резервирай</button>
         </form>

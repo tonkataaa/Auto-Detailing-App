@@ -20,7 +20,7 @@
 		[MaxLength(PhoneNumberMaxLength, ErrorMessage = PhoneNumberMaxMessage)]
 		public string PhoneNumber { get; set; }
 
-		public DateTime Date { get; set; }
+		public DateTime DateForReservation { get; set; }
 
 		[Required(ErrorMessage = ServiceRequiredMessage)]
 		public string Service { get; set; }
