@@ -8,10 +8,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace AutoDetailingApp.Data.Migrations
+namespace AutoDetailingApp.Migrations
 {
     [DbContext(typeof(AutoDetailingDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    partial class AutoDetailingDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -35,12 +35,23 @@ namespace AutoDetailingApp.Data.Migrations
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("DATETIME2")
+                        .HasDefaultValueSql("GETDATE()");
+
                     b.Property<string>("Email")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
+                        .IsRequired()
+                        .HasMaxLength(320)
+                        .HasColumnType("NVARCHAR(320)");
 
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("NVARCHAR(50)");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
@@ -57,13 +68,22 @@ namespace AutoDetailingApp.Data.Migrations
                         .HasColumnType("nvarchar(256)");
 
                     b.Property<string>("PasswordHash")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(128)
+                        .HasColumnType("NVARCHAR(128)");
 
                     b.Property<string>("PhoneNumber")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("NVARCHAR(20)");
 
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
+
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("NVARCHAR(50)");
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
@@ -140,7 +160,7 @@ namespace AutoDetailingApp.Data.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Appointments");
+                    b.ToTable("Appointments", (string)null);
                 });
 
             modelBuilder.Entity("AutoDetailingApp.Models.ContactRequest", b =>
@@ -156,27 +176,27 @@ namespace AutoDetailingApp.Data.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("NVARCHAR(200)");
+                        .HasMaxLength(320)
+                        .HasColumnType("NVARCHAR(320)");
 
                     b.Property<string>("FullName")
                         .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("NVARCHAR(200)");
+                        .HasMaxLength(50)
+                        .HasColumnType("NVARCHAR(50)");
 
                     b.Property<string>("Message")
                         .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("NVARCHAR(500)");
+                        .HasMaxLength(5)
+                        .HasColumnType("NVARCHAR(300)");
 
                     b.Property<string>("PhoneNumber")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("NVARCHAR(20)");
+                        .HasMaxLength(15)
+                        .HasColumnType("NVARCHAR(15)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("ContactRequests");
+                    b.ToTable("ContactRequests", (string)null);
                 });
 
             modelBuilder.Entity("AutoDetailingApp.Models.Pricing", b =>
@@ -200,7 +220,7 @@ namespace AutoDetailingApp.Data.Migrations
 
                     b.HasIndex("ServiceId");
 
-                    b.ToTable("Pricings");
+                    b.ToTable("Pricings", (string)null);
                 });
 
             modelBuilder.Entity("AutoDetailingApp.Models.Service", b =>
@@ -224,56 +244,15 @@ namespace AutoDetailingApp.Data.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("NVARCHAR(250)");
+                        .HasMaxLength(50)
+                        .HasColumnType("NVARCHAR(50)");
 
                     b.Property<decimal>("Price")
                         .HasColumnType("DECIMAL(18,2)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Services");
-                });
-
-            modelBuilder.Entity("AutoDetailingApp.Models.User", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("DATETIME2")
-                        .HasDefaultValueSql("GETDATE()");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("NVARCHAR(200)");
-
-                    b.Property<string>("FullName")
-                        .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("NVARCHAR(200)");
-
-                    b.Property<string>("PasswordHash")
-                        .IsRequired()
-                        .HasMaxLength(128)
-                        .HasColumnType("NVARCHAR(128)");
-
-                    b.Property<string>("PhoneNumber")
-                        .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("NVARCHAR(20)");
-
-                    b.Property<string>("Role")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("NVARCHAR(50)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Users");
+                    b.ToTable("Services", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole<System.Guid>", b =>
@@ -416,7 +395,7 @@ namespace AutoDetailingApp.Data.Migrations
                         .IsRequired()
                         .HasConstraintName("FK_Appointments_Services");
 
-                    b.HasOne("AutoDetailingApp.Models.User", "User")
+                    b.HasOne("AutoDetailingApp.Models.ApplicationUser", "User")
                         .WithMany("Appointments")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -490,16 +469,16 @@ namespace AutoDetailingApp.Data.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("AutoDetailingApp.Models.ApplicationUser", b =>
+                {
+                    b.Navigation("Appointments");
+                });
+
             modelBuilder.Entity("AutoDetailingApp.Models.Service", b =>
                 {
                     b.Navigation("Appointments");
 
                     b.Navigation("Pricings");
-                });
-
-            modelBuilder.Entity("AutoDetailingApp.Models.User", b =>
-                {
-                    b.Navigation("Appointments");
                 });
 #pragma warning restore 612, 618
         }

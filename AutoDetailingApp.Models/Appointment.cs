@@ -16,7 +16,7 @@ namespace AutoDetailingApp.Models
         public Guid Id { get; set; }
         public Guid UserId { get; set; }
 
-        public ClientUser User { get; set; }
+        public ApplicationUser User { get; set; }
 
         public string FullName { get; set; }
 

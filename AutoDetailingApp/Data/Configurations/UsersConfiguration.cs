@@ -5,10 +5,10 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace AutoDetailingApp.Data.Configurations
 {
-	public class UsersConfiguration : IEntityTypeConfiguration<ClientUser>
+	public class UsersConfiguration : IEntityTypeConfiguration<ApplicationUser>
 	{
 
-		public void Configure(EntityTypeBuilder<ClientUser> builder)
+		public void Configure(EntityTypeBuilder<ApplicationUser> builder)
 		{
 			builder
 				.HasKey(t => t.Id);
