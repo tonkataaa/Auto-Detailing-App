@@ -4,6 +4,7 @@ using AutoDetailingApp.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,13 +12,15 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AutoDetailingApp.Migrations
 {
     [DbContext(typeof(AutoDetailingDbContext))]
-    partial class AutoDetailingDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250507055412_SeedServiceAndPricing")]
+    partial class SeedServiceAndPricing
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.4")
+                .HasAnnotation("ProductVersion", "8.0.13")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -79,11 +82,6 @@ namespace AutoDetailingApp.Migrations
 
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
-
-                    b.Property<string>("Role")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("NVARCHAR(50)");
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
@@ -160,7 +158,7 @@ namespace AutoDetailingApp.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Appointments", (string)null);
+                    b.ToTable("Appointments");
                 });
 
             modelBuilder.Entity("AutoDetailingApp.Models.ContactRequest", b =>
@@ -196,7 +194,7 @@ namespace AutoDetailingApp.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ContactRequests", (string)null);
+                    b.ToTable("ContactRequests");
                 });
 
             modelBuilder.Entity("AutoDetailingApp.Models.Pricing", b =>
@@ -220,7 +218,37 @@ namespace AutoDetailingApp.Migrations
 
                     b.HasIndex("ServiceId");
 
-                    b.ToTable("Pricings", (string)null);
+                    b.ToTable("Pricings");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("e87c89a4-2a7f-4f0e-b1b8-001111111111"),
+                            EffectiveFrom = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 210.00m,
+                            ServiceId = new Guid("14d701f7-36e4-43e4-b14e-0d881a99a190")
+                        },
+                        new
+                        {
+                            Id = new Guid("e87c89a4-2a7f-4f0e-b1b8-003333333333"),
+                            EffectiveFrom = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 80.00m,
+                            ServiceId = new Guid("4f54bc58-b3eb-4d7d-b867-2f1964968ae8")
+                        },
+                        new
+                        {
+                            Id = new Guid("e87c89a4-2a7f-4f0e-b1b8-004444444444"),
+                            EffectiveFrom = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 80.00m,
+                            ServiceId = new Guid("b79310c6-9da1-4f88-80f5-f8e7f099a642")
+                        },
+                        new
+                        {
+                            Id = new Guid("e87c89a4-2a7f-4f0e-b1b8-002222222222"),
+                            EffectiveFrom = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 270.00m,
+                            ServiceId = new Guid("a36cce33-44df-4035-8d98-6b7f7978a04c")
+                        });
                 });
 
             modelBuilder.Entity("AutoDetailingApp.Models.Service", b =>
@@ -252,7 +280,45 @@ namespace AutoDetailingApp.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Services", (string)null);
+                    b.ToTable("Services");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("14d701f7-36e4-43e4-b14e-0d881a99a190"),
+                            CreatedAt = new DateTime(2025, 5, 7, 5, 54, 9, 134, DateTimeKind.Utc).AddTicks(148),
+                            Description = "Пране на мокет и текстилен салон\n Почистване и подхранване на всички повърхности\nИмпрегниране на текстил или кож",
+                            DurationMinutes = 120,
+                            Name = "Вътрешно почистване",
+                            Price = 210.00m
+                        },
+                        new
+                        {
+                            Id = new Guid("4f54bc58-b3eb-4d7d-b867-2f1964968ae8"),
+                            CreatedAt = new DateTime(2025, 5, 7, 5, 54, 9, 134, DateTimeKind.Utc).AddTicks(153),
+                            Description = "Безконтактно измиване\nРъчно миене с премахване на смоли и лепила\nНанасяне на защитно покритие (до 3 месеца)",
+                            DurationMinutes = 120,
+                            Name = "Външно почистване",
+                            Price = 80.00m
+                        },
+                        new
+                        {
+                            Id = new Guid("b79310c6-9da1-4f88-80f5-f8e7f099a642"),
+                            CreatedAt = new DateTime(2025, 5, 7, 5, 54, 9, 134, DateTimeKind.Utc).AddTicks(167),
+                            Description = "Възстановяване на прозрачността\nЗащитно покритие с трайност до 1 година\n",
+                            DurationMinutes = 120,
+                            Name = "Полиране на фарове",
+                            Price = 80.00m
+                        },
+                        new
+                        {
+                            Id = new Guid("a36cce33-44df-4035-8d98-6b7f7978a04c"),
+                            CreatedAt = new DateTime(2025, 5, 7, 5, 54, 9, 134, DateTimeKind.Utc).AddTicks(170),
+                            Description = "Професионални услуги за възстановяване на блясъка и свежестта на Вашия автомобил – както отвън, така и отвътре",
+                            DurationMinutes = 240,
+                            Name = "Цялостно детайлно почистване",
+                            Price = 270.00m
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole<System.Guid>", b =>

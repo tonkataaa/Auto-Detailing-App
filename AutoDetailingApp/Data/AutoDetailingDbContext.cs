@@ -39,8 +39,6 @@ public class AutoDetailingDbContext : IdentityDbContext<ApplicationUser, Identit
 	protected override void OnModelCreating(ModelBuilder modelBuilder)
 	{
 		base.OnModelCreating(modelBuilder);
-		modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+		modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());	
 	}
-
-
 }

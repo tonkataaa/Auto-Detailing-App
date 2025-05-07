@@ -38,11 +38,6 @@ namespace AutoDetailingApp.Data.Configurations
 				.HasColumnType($"NVARCHAR({128})");
 
 			builder
-				.Property(t => t.Role)
-				.HasMaxLength(50)
-				.HasColumnType($"NVARCHAR({50})");
-
-			builder
 				.Property(t => t.CreatedAt)
 				.HasColumnType("DATETIME2")
 				.HasDefaultValueSql("GETDATE()");
