@@ -6,8 +6,9 @@
 	using static AutoDetailingApp.Common.EntityValidationConstants.Reservation;
 
 	using System.ComponentModel.DataAnnotations;
+	using Microsoft.AspNetCore.Mvc.Rendering;
 
-    public class ReservationFormModel
+	public class ReservationFormModel
     {
 		[Required(ErrorMessage = NameRequiredMessage)]
 		[MinLength(NameMinLength, ErrorMessage = NameMinMessage)]
@@ -20,11 +21,18 @@
 		[MaxLength(PhoneNumberMaxLength, ErrorMessage = PhoneNumberMaxMessage)]
 		public string PhoneNumber { get; set; }
 
+		[Required]
+		[EmailAddress(ErrorMessage = EmailRequiredMessage)]
+		[MinLength(EmailMinLength, ErrorMessage = EmailMinMessage)]
+		[MaxLength(EmailMaxLength, ErrorMessage = EmailMaxMessage)]
+		public string Email { get; set; }
+
 		public DateTime DateForReservation { get; set; }
 
 		[Required(ErrorMessage = ServiceRequiredMessage)]
-		public string Service { get; set; }
+		public Guid ServiceId { get; set; }
 
+		public IEnumerable<SelectListItem> AvailableServices { get; set; } = new List<SelectListItem>();
 
 		public bool Status { get; set; }
 
