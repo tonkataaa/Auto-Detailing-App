@@ -17,23 +17,24 @@
 <div class="reservation-main">
     <div class="reservation-form">
         <h2>Запиши час за детайлинг</h2>
-        <form class="booking-form">
+        <form method="post" asp-action="ReservationForm" class="booking-form">
             <label> Име и фамилия:</label>
             <input asp-for = "FullName" type="text" placeholder="Вашето име" required>
 
             <label>Телефон за връзка:</label>
             <input asp-for = "PhoneNumber" type="tel" placeholder="+359XXXXXXXXX" required>
 
+            <label>Имейл:</label>
+            <input asp-for = "Email" type="email"/>
+
             <label>Дата и час:</label>
-            <input asp-for = "DateForReservation" type="datetime-local" required>
+            <input asp-for="DateForReservation" type="datetime-local" min="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm")"
+                   value="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm")"
+                    required>
 
             <label>Тип услуга:</label>
-            <select required asp-for="Service">
+            <select asp-for = "ServiceId" asp-items="Model.AvailableServices" required >
                 <option value="">Избери услуга</option>
-                <option>Въшно почистване</option>
-                <option>Вътрешно почистване</option>
-                <option>Полиране на фарове</option>
-                <option>Пълна програма</option>
             </select>
 
             <label>Коментар:</label>
@@ -44,3 +45,7 @@
 
     </div>
 </div>
+
+@section Scripts{
+    <script src="~/js/calendar.js" asp-append-version="true"></script>
+}             
