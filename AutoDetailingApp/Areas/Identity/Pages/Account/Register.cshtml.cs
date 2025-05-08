@@ -63,7 +63,7 @@ namespace AutoDetailingApp.Views.Account
 			[Required(ErrorMessage = EntityValidationMessages.User.NameRequiredMessage)]
 			[StringLength(EntityValidationConstants.User.FullNameMaxLength, ErrorMessage = "Името трябва да бъде поне {2} и максимум {1} символа.", MinimumLength = EntityValidationConstants.User.FullNameMinLength)]
 			[Display(Name = "Потребителско име")]
-			public string Username { get; set; }
+			public string FullName { get; set; }
 
 
 
@@ -108,9 +108,10 @@ namespace AutoDetailingApp.Views.Account
 			{
 				var user = CreateUser();
 				user.Email = Input.Email;
-				user.UserName = Input.Email;
+				user.FullName = Input.Email;
+				user.PhoneNumber = Input.PhoneNumber;
 
-				await _userStore.SetUserNameAsync(user, Input.Username, CancellationToken.None);
+				await _userStore.SetUserNameAsync(user, Input.FullName, CancellationToken.None);
 				var result = await _userManager.CreateAsync(user, Input.Password);
 
 				if (result.Succeeded)

@@ -1,6 +1,5 @@
 ﻿@page
 @model AutoDetailingApp.Views.Account.RegisterModel
-@* DEBUG: THIS IS THE CORRECT FILE *@
 @{
     ViewData["Title"] = "Регистрация";
     Layout = null;
@@ -23,8 +22,8 @@
 
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-            <input asp-for="Input.Username" class="input-field" placeholder="Потребителско име" />
-            <span asp-validation-for="Input.Username" class="text-danger"></span>
+            <input asp-for="Input.FullName" class="input-field" placeholder="Потребителско име" />
+            <span asp-validation-for="Input.FullName" class="text-danger"></span>
 
             <input asp-for="Input.Email" class="input-field" placeholder="Имейл" />
             <span asp-validation-for="Input.Email" class="text-danger"></span>
