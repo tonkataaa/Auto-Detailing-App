@@ -103,7 +103,7 @@ nav a i {
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),url(/images/istockphoto-1406558462-612x612.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),url(~/images/Exterior/1.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
