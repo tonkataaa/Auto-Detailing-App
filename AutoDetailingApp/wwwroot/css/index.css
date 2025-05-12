@@ -103,10 +103,10 @@ nav a i {
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),url(~/images/Exterior/1.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),url(/images/Exterior/4copy.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: center;
+	background-position: center bottom;
 	gap: 25px;
 	height: 100vh;
 	padding: 300px 0;
