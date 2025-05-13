@@ -20,6 +20,7 @@ namespace AutoDetailingApp.Controllers
 		}
 
 		[HttpGet]
+        [Authorize]
         public async Task<IActionResult> Reservation()
         {
             var servicesFromDb = await dbContext.Services.ToListAsync();
@@ -42,7 +43,6 @@ namespace AutoDetailingApp.Controllers
         }
 
         [HttpPost]
-        [Authorize]
         public async Task<IActionResult> ReservationForm(ReservationFormModel model)
         {
             if (!ModelState.IsValid)
