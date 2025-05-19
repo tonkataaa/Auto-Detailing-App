@@ -40,6 +40,8 @@
 		[MaxLength(CommentMaxLength, ErrorMessage = CommentMaxMessage)]
 		public string Comment { get; set; }
 
-		public DateTime CreatedAt { get; set; } 
+		public DateTime CreatedAt { get; set; }
+
+		public List<SelectListItem> AvailableHours { get; set; } = new List<SelectListItem>();
 	}
 }
