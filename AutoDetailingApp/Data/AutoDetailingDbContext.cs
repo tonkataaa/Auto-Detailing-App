@@ -38,6 +38,12 @@ public class AutoDetailingDbContext : IdentityDbContext<ApplicationUser, Identit
 
 	protected override void OnModelCreating(ModelBuilder modelBuilder)
 	{
+        modelBuilder.Entity<Service>()
+            .Property(s => s.DurationMinutes)
+            .HasConversion(
+            v => (int)v.TotalMinutes,
+            v => TimeSpan.FromMinutes(v));
+
 		base.OnModelCreating(modelBuilder);
 		modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());	
 	}
