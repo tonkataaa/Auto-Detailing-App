@@ -23,7 +23,7 @@ namespace AutoDetailingApp.Models
 
         public decimal Price { get; set; }
 
-        public int DurationMinutes { get; set; }
+        public TimeSpan DurationMinutes { get; set; }
 
         public DateTime CreatedAt { get; set; }
 
