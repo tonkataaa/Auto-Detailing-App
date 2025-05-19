@@ -1,51 +1,248 @@
-﻿@using AutoDetailingApp.Web.ViewModels
-@using AutoDetailingApp.Web.ViewModels.Reservation
-
-
+﻿@using AutoDetailingApp.Web.ViewModels.Reservation
 @model ReservationFormModel
 
-@section Styles{
+@section Styles {
     <link rel="stylesheet" href="~/css/reservation.css" asp-append-version="true">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" />
+    <style>
+        .validation-summary-errors {
+            color: #ff6b6b;
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: rgba(255, 0, 0, 0.1);
+            border-radius: 5px;
+        }
 
+        .field-validation-error {
+            color: #ff6b6b;
+            font-size: 14px;
+            margin-top: 5px;
+            display: block;
+        }
+
+        #calendar {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        .booked-day {
+            background-color: #fff3cd !important;
+        }
+
+        .time-slot-container {
+            margin-top: 20px;
+        }
+
+        .time-slot {
+            display: inline-block;
+            padding: 10px 15px;
+            margin: 5px;
+            background: #f5f5f5;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+            .time-slot.selected {
+                background-color: #4CAF50;
+                color: white;
+            }
+
+        .fc-day:hover {
+            background-color: #f8f9fa;
+        }
+
+        .reservation-form {
+            max-width: 900px;
+            margin: 80px auto;
+            padding: 40px;
+            background-color: #020a9bd3;
+            border-radius: 12px;
+            color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .booking-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+            .booking-form input,
+            .booking-form select,
+            .booking-form textarea {
+                padding: 12px;
+                border: none;
+                border-radius: 6px;
+                font-size: 16px;
+            }
+
+            .booking-form button {
+                padding: 14px;
+                font-size: 16px;
+                font-weight: bold;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+                background-color: hsl(210, 95%, 30%);
+                color: white;
+                transition: all 0.3s ease;
+            }
+
+                .booking-form button:hover {
+                    background-color: hsl(210, 95%, 40%);
+                    transform: translateY(-2px);
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+                }
+    </style>
 }
 
-@{
-    ViewData["Title"] = "Резервирай час";
-}
+<div class="reservation-form">
+    <h2>Запиши час за детайлинг</h2>
+    <form method="post" asp-action="ReservationForm" class="booking-form">
+        <div asp-validation-summary="ModelOnly" class="validation-summary-errors"></div>
 
-<div class="background image"></div>
-<div class="reservation-main">
-    <div class="reservation-form">
-        <h2>Запиши час за детайлинг</h2>
-        <form method="post" asp-action="ReservationForm" class="booking-form">
-            <label> Име и фамилия:</label>
-            <input asp-for = "FullName" type="text" placeholder="Вашето име" required>
+        <label>Име и фамилия:</label>
+        <input asp-for="FullName" type="text" placeholder="Вашето име" required>
+        <span asp-validation-for="FullName" class="field-validation-error"></span>
 
-            <label>Телефон за връзка:</label>
-            <input asp-for = "PhoneNumber" type="tel" placeholder="+359XXXXXXXXX" required>
+        <label>Телефон за връзка:</label>
+        <input asp-for="PhoneNumber" type="tel" placeholder="+359XXXXXXXXX" required>
+        <span asp-validation-for="PhoneNumber" class="field-validation-error"></span>
 
-            <label>Имейл:</label>
-            <input asp-for = "Email" type="email"/>
+        <label>Имейл:</label>
+        <input asp-for="Email" type="email">
+        <span asp-validation-for="Email" class="field-validation-error"></span>
 
-            <label>Дата и час:</label>
-            <input asp-for="DateForReservation" type="datetime-local" min="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm")"
-                   value="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm")"
-                    required>
+        <div class="form-group">
+            <label>Дата:</label>
+            <div id="calendar"></div>
+            <input type="hidden" id="selectedDate" asp-for="DateForReservation" />
+            <span asp-validation-for="DateForReservation" class="field-validation-error"></span>
 
-            <label>Тип услуга:</label>
-            <select asp-for = "ServiceId" asp-items="Model.AvailableServices" required >
-                <option value="">Избери услуга</option>
-            </select>
+            <div class="time-slot-container" id="timeSlotsContainer" style="display: none;">
+                <h4>Изберете час:</h4>
+                <div id="timeSlots">
+                    @foreach (var hour in Model.AvailableHours)
+                    {
+                        <div class="time-slot" data-hour="@hour.Value">@hour.Text</div>
+                    }
+                </div>
+            </div>
+        </div>
 
-            <label>Коментар:</label>
-            <textarea rows="3" placeholder="Допълнителна информация..." asp-for="Comment"></textarea>
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success">
+                @TempData["SuccessMessage"]
+            </div>
+        }
 
-            <button type="submit">Резервирай</button>
-        </form>
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <div class="alert alert-danger">
+                @TempData["ErrorMessage"]
+            </div>
+        }
 
-    </div>
+        <label>Тип услуга:</label>
+        <select asp-for="ServiceId" asp-items="Model.AvailableServices" required>
+            <option value="">Избери услуга</option>
+        </select>
+        <span asp-validation-for="ServiceId" class="field-validation-error"></span>
+
+        <label>Коментар:</label>
+        <textarea rows="3" placeholder="Допълнителна информация..." asp-for="Comment"></textarea>
+
+        <button type="submit">Резервирай</button>
+    </form>
 </div>
 
-@section Scripts{
-    <script src="~/js/calendar.js" asp-append-version="true"></script>
-}             
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/locales/bg.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            var selectedDateInput = document.getElementById('selectedDate');
+            var timeSlotsContainer = document.getElementById('timeSlotsContainer');
+            var timeSlots = document.querySelectorAll('.time-slot');
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                locale: 'bg',
+                headerToolbar: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth'
+                },
+                validRange: {
+                    start: new Date()
+                },
+                datesSet: function() {
+                    loadBookedDays();
+                },
+                dateClick: function(info) {
+                    
+                    if (info.date < new Date()) {
+                        alert('Не можете да резервирате за минала дата');
+                        return;
+                    }
+
+                    
+                    var isBooked = document.querySelector(`.fc-day[data-date="${info.dateStr}"]`).classList.contains('booked-day');
+
+                    if (isBooked) {
+                        alert('Тази дата вече е заета. Моля изберете друга дата.');
+                        timeSlotsContainer.style.display = 'none';
+                    } else {
+                        selectedDateInput.value = info.dateStr;
+                        timeSlotsContainer.style.display = 'block';
+
+                        document.querySelectorAll('.fc-day').forEach(day => {
+                            day.classList.remove('fc-day-selected');
+                        });
+                        document.querySelector(`.fc-day[data-date="${info.dateStr}"]`).classList.add('fc-day-selected');
+                    }
+                }
+            });
+
+            calendar.render();
+
+                   timeSlots.forEach(slot => {
+            slot.addEventListener('click', function() {
+                timeSlots.forEach(s => s.classList.remove('selected'));
+                this.classList.add('selected');
+
+                var selectedDate = selectedDateInput.value;
+                var selectedHour = this.getAttribute('data-hour');
+                var [hours, minutes] = selectedHour.split(':');
+
+                
+                var dateObj = new Date(selectedDate);
+                dateObj.setHours(parseInt(hours), parseInt(minutes));
+
+               
+                var formattedDate = dateObj.toISOString().slice(0, 16);
+                selectedDateInput.value = formattedDate;
+            });
+        });
+
+            function loadBookedDays() {
+                fetch('/Reservation/GetBookedDays')
+                    .then(response => response.json())
+                    .then(data => {
+                        data.forEach(day => {
+                            let cell = document.querySelector(`.fc-day[data-date="${day.date}"]`);
+                            if (cell) {
+                                cell.classList.add('booked-day');
+                            }
+                        });
+                    });
+            }
+        });
+    </script>
+}
