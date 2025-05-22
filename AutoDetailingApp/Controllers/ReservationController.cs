@@ -1,6 +1,7 @@
 ﻿using AutoDetailingApp.Data;
 using AutoDetailingApp.Models;
 using AutoDetailingApp.Web.ViewModels.Reservation;
+using CinemaApp.Data;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;

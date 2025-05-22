@@ -3,17 +3,22 @@ namespace AutoDetailingApp.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
 
+	using AutoMapper;
+
+
+	using CinemaApp.Data;
     using AutoDetailingApp.Web.ViewModels;
-	using AutoDetailingApp.Data;
 	using AutoDetailingApp.Models;
 
 	public class ContactController : Controller
     {
+        private readonly IMapper mapper;
 		private readonly AutoDetailingDbContext dbContext;
 
-		public ContactController(AutoDetailingDbContext dbContext)
+		public ContactController(AutoDetailingDbContext dbContext, IMapper mapper)
 		{
             this.dbContext = dbContext;
+            this.mapper = mapper;
 			
 		}
 
