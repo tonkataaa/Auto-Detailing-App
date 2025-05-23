@@ -1,6 +1,6 @@
 ﻿namespace AutoDetailingApp.Services.Mapping
 {
-    interface IMapTo<T>
+    public interface IMapTo<T>
     {
     }
 }
