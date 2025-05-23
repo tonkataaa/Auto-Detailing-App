@@ -6,8 +6,10 @@ namespace AutoDetailingApp.Web.ViewModels
 	using AutoDetailingApp.Common;
 	using static AutoDetailingApp.Common.EntityValidationMessages.Contact;
 	using static AutoDetailingApp.Common.EntityValidationConstants.ContactRequest;
+	using AutoDetailingApp.Services.Mapping;
+	using AutoDetailingApp.Models;
 
-	public class ContactFormModel
+	public class ContactFormModel : IMapTo<ContactRequest>
 	{
 		[Required(ErrorMessage = NameRequiredMessage)]
 		[MinLength(NameMinLength, ErrorMessage = NameMinMessage)]
