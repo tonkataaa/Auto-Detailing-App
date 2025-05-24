@@ -1,10 +1,13 @@
-﻿using AutoDetailingApp.Common;
-using AutoDetailingApp.Models;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-
+﻿
 namespace AutoDetailingApp.Data.Configurations
 {
+
+	using Microsoft.EntityFrameworkCore;
+	using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
+	using AutoDetailingApp.Common;
+	using AutoDetailingApp.Models;
+
 	public class AppointmentsConfiguration : IEntityTypeConfiguration<Appointment>
 	{
 		public void Configure(EntityTypeBuilder<Appointment> builder)

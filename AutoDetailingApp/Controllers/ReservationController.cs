@@ -1,26 +1,19 @@
-﻿using AutoDetailingApp.Data;
-using AutoDetailingApp.Models;
-using AutoDetailingApp.Web.ViewModels.Reservation;
-using CinemaApp.Data;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
-using System.Threading.Tasks;
-
-namespace AutoDetailingApp.Controllers
+﻿namespace AutoDetailingApp.Controllers
 {
-	public class ReservationController : Controller
-	{
-		private readonly AutoDetailingDbContext _dbContext;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.AspNetCore.Authorization;
+    using System.Security.Claims;
 
-		public ReservationController(AutoDetailingDbContext dbContext)
+    using AutoDetailingApp.Web.ViewModels.Reservation;
+    using AutoDetailingApp.Services.Data.Interfaces;
+
+    public class ReservationController : Controller
+	{
+        private readonly IReservationService reservationService;
+
+		public ReservationController(IReservationService reservationService)
 		{
-			_dbContext = dbContext;
+            this.reservationService = reservationService;
 		}
 
 		[HttpGet]
@@ -29,21 +22,11 @@ namespace AutoDetailingApp.Controllers
 		{
 			var model = new ReservationFormModel
 			{
-				AvailableServices = await GetAvailableServicesAsync(),
-				AvailableHours = GetAvailableHours()
+				AvailableServices = await reservationService.GetAvailableServicesAsync(),
+				AvailableHours = reservationService.GetAvailableHours()
 			};
+
 			return View(model);
-		}
-
-		[HttpGet]
-		public async Task<IActionResult> GetBookedDays()
-		{
-			var bookedDays = await _dbContext.Appointments
-				.Select(a => new { date = a.DateTime.Date.ToString("yyyy-MM-dd") })
-				.Distinct()
-				.ToListAsync();
-
-			return Ok(bookedDays);
 		}
 
 		[HttpPost]
@@ -53,68 +36,32 @@ namespace AutoDetailingApp.Controllers
 		{
 			if (!ModelState.IsValid)
 			{
-				model.AvailableServices = await GetAvailableServicesAsync();
-				model.AvailableHours = GetAvailableHours();
+				model.AvailableServices = await reservationService.GetAvailableServicesAsync();
+				model.AvailableHours = reservationService.GetAvailableHours();
 				return View("Reservation", model);
 			}
 
-			var isDateBooked = await _dbContext.Appointments
-				.AnyAsync(a => a.DateTime.Date == model.DateForReservation.Date);
+            if (await reservationService.IsDateBookedAsync(model.DateForReservation))
+            {
+                ModelState.AddModelError("DateForReservation", "Датата е заета");
+                model.AvailableServices = await reservationService.GetAvailableServicesAsync();
+                model.AvailableHours = reservationService.GetAvailableHours();
+                return View("Reservation", model);
+            }
 
-			if (isDateBooked)
-			{
-				ModelState.AddModelError("DateForReservation", "Избраната дата вече е заета");
-				model.AvailableServices = await GetAvailableServicesAsync();
-				model.AvailableHours = GetAvailableHours();
-				return View("Reservation", model);
-			}
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            bool isSuccess = await reservationService.TryCreateReservationAsync(model, userId);
 
-			try
-			{
-				var userId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
-
-				var appointment = new Appointment
-				{
-					FullName = model.FullName,
-					PhoneNumber = model.PhoneNumber,
-					Email = model.Email,
-					DateTime = model.DateForReservation,
-					ServiceId = model.ServiceId,
-					Comment = model.Comment,
-					Status = "Pending",
-					CreatedAt = DateTime.UtcNow,
-					UserId = userId
-				};
-
-				_dbContext.Appointments.Add(appointment);
-				await _dbContext.SaveChangesAsync();
-
-				TempData["SuccessMessage"] = "Успешно резервирахте час за " + model.DateForReservation.ToString("dd.MM.yyyy HH:mm");
-				return RedirectToAction(nameof(Reservation));
-			}
-			catch (Exception ex)
-			{
-				Console.WriteLine($"Грешка при резервация: {ex.Message}");
-				TempData["ErrorMessage"] = $"Грешка: {ex.Message}";
-				return RedirectToAction(nameof(Reservation));
-			}
-		}
-
-		private async Task<List<SelectListItem>> GetAvailableServicesAsync()
-		{
-			return await _dbContext.Services
-				.Select(s => new SelectListItem
-				{
-					Value = s.Id.ToString(),
-					Text = s.Name
-				})
-				.ToListAsync();
-		}
-
-		private List<SelectListItem> GetAvailableHours()
-		{
-			var hours = new List<string> { "8:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00" };
-			return hours.Select(h => new SelectListItem { Value = h, Text = h }).ToList();
+			if (isSuccess)
+            {
+                TempData["SuccessMessage"] = "Резервацията е успешна!";
+                return RedirectToAction(nameof(Reservation));
+            }
+            else
+            {
+                TempData["ErrorMessage"] = "Грешка при резервация";
+                return RedirectToAction(nameof(Reservation));
+            }
 		}
 	}
 }

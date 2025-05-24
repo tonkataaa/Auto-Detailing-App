@@ -1,10 +1,16 @@
+using Microsoft.AspNetCore.Localization;
 using System.Globalization;
+using Microsoft.EntityFrameworkCore;
 
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 using AutoDetailingApp.Data;
 using AutoDetailingApp.Models;
-using Microsoft.AspNetCore.Localization;
+using System.Reflection;
+using AutoDetailingApp.Data.Repository.Interfaces;
+using AutoDetailingApp.Data.Repository;
+using AutoDetailingApp.Services.Data.Interfaces;
+using AutoDetailingApp.Services.Data;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,6 +35,10 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole<Guid>>(options =>
 .AddDefaultTokenProviders();
 
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped(typeof(IRepository<,>), typeof(BaseRepository<,>));
+builder.Services.AddScoped<IContactService, ContactService>();
+builder.Services.AddScoped<IRepository<Service, Guid>, BaseRepository<Service, Guid>>();
+builder.Services.AddScoped<IReservationService, ReservationService>();
 
 var app = builder.Build();
 

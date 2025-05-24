@@ -12,7 +12,7 @@ namespace AutoDetailingApp.Controllers
     {
         private readonly IContactService contactService;
 
-		public ContactController(AutoDetailingDbContext dbContext, IContactService contactService)
+		public ContactController(IContactService contactService)
 		{
             this.contactService = contactService;
 		}

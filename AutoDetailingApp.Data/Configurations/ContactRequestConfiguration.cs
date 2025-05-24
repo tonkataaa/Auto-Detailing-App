@@ -1,10 +1,12 @@
-﻿using AutoDetailingApp.Models;
-using AutoDetailingApp.Common;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-
+﻿
 namespace AutoDetailingApp.Data.Configurations
 {
+	using AutoDetailingApp.Models;
+	using AutoDetailingApp.Common;
+
+	using Microsoft.EntityFrameworkCore;
+	using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
 	public class ContactRequestConfiguration : IEntityTypeConfiguration<ContactRequest>
 	{
 		public void Configure(EntityTypeBuilder<ContactRequest> builder)
