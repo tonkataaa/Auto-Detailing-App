@@ -7,6 +7,7 @@
 	using AutoDetailingApp.Data.Repository.Interfaces;
 	using Microsoft.EntityFrameworkCore;
 	using AutoDetailingApp.Data;
+	using System.Linq.Expressions;
 
 	public class BaseRepository<TType, TId> : IRepository<TType, TId>
 		where TType : class
@@ -20,37 +21,6 @@
 			this.dbSet = this.dbContext.Set<TType>();
 		}
 
-		public TType GetById(TId id)
-		{
-			TType entity = this.dbSet
-				.Find(id);
-
-			return entity;
-		}
-
-		public async Task<TType> GetByIdAsync(TId id)
-		{
-			TType entity = await this.dbSet
-				.FindAsync(id);
-
-			return entity;
-		}
-
-		public IEnumerable<TType> GetAll()
-		{
-			return this.dbSet.ToArray();
-		}
-
-		public async Task<IEnumerable<TType>> GetAllAsync()
-		{
-			return await this.dbSet.ToArrayAsync();
-		}
-
-		public IQueryable<TType> GetAllAttached()
-		{
-			return this.dbSet.AsQueryable();
-		}
-
 		public void Add(TType item)
 		{
 			this.dbSet.Add(item);
@@ -62,35 +32,6 @@
 			await this.dbSet.AddAsync(item);
 			await this.dbContext.SaveChangesAsync();
 		}
-
-		public bool Delete(TId id)
-		{
-			TType entity = this.GetById(id);
-			if (entity == null)
-			{
-				return false;
-			}
-
-			this.dbSet.Remove(entity);
-			this.dbContext.SaveChanges();
-
-			return true;
-		}
-
-		public async Task<bool> DeleteAsync(TId id)
-		{
-			TType entity = await this.GetByIdAsync(id);
-			if (entity == null)
-			{
-				return false;
-			}
-
-			this.dbSet.Remove(entity);
-			await this.dbContext.SaveChangesAsync();
-
-			return true;
-		}
-
 		public bool Update(TType item)
 		{
 			try
@@ -122,5 +63,26 @@
 				return false;
 			}
 		}
+
+		public async Task<TType?> GetByIdAsync(TId id)
+		{
+			return await dbSet.FindAsync(id);
+		}
+
+		public async Task<IEnumerable<TType>> GetAllAsync()
+		{
+			return await dbSet.ToListAsync();
+		}
+
+		public async Task<IEnumerable<TType>> FindAsync(Expression<Func<TType, bool>> predicate)
+		{
+			return await dbSet.Where(predicate).ToListAsync();
+		}
+
+		public async Task<bool> ExistsAsync(Expression<Func<TType, bool>> predicate)
+		{
+			return await dbSet.AnyAsync(predicate);
+		}
+
 	}
 }

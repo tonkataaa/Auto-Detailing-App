@@ -1,29 +1,22 @@
-﻿namespace AutoDetailingApp.Data.Repository.Interfaces
+﻿using System.Data.Entity.Core.Objects.DataClasses;
+using System.Linq.Expressions;
+
+namespace AutoDetailingApp.Data.Repository.Interfaces
 {
     public interface IRepository<TType, TId>
     {
-		TType GetById(TId id);
-
-		Task<TType> GetByIdAsync(TId id);
-
-		IEnumerable<TType> GetAll();
-
-		Task<IEnumerable<TType>> GetAllAsync();
-
-		IQueryable<TType> GetAllAttached();
-
+        //Create
+        Task AddAsync(TType item);
 		void Add(TType item);
 
-        Task AddAsync(TType item);
+		//Read
+		Task<TType?> GetByIdAsync(TId id);
+		Task<IEnumerable<TType>> GetAllAsync();
+		Task<IEnumerable<TType>> FindAsync(Expression<Func<TType, bool>> predicate);
+		Task<bool> ExistsAsync(Expression<Func<TType, bool>> predicate);
 
-        bool Delete(TId id);
-
-        Task<bool> DeleteAsync(TId id);
-
-        bool Update(TType item);
-
-        Task<bool> UpdateAsync(TType item);
-
-
+		//Update
+		Task<bool> UpdateAsync(TType item);
+		bool Update(TType item);
     }
 }
