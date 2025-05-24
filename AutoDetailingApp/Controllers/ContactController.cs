@@ -3,23 +3,20 @@ namespace AutoDetailingApp.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
 
-	using AutoMapper;
-
-
-	using CinemaApp.Data;
-    using AutoDetailingApp.Web.ViewModels;
 	using AutoDetailingApp.Models;
+	using AutoDetailingApp.Data;
+    using AutoDetailingApp.Web.ViewModels;
+    using AutoDetailingApp.Services.Data.Interfaces;
 
-	public class ContactController : Controller
+    public class ContactController : Controller
     {
-        private readonly IMapper mapper;
 		private readonly AutoDetailingDbContext dbContext;
+        private readonly IContactService contactService;
 
-		public ContactController(AutoDetailingDbContext dbContext, IMapper mapper)
+		public ContactController(AutoDetailingDbContext dbContext, IContactService contactService)
 		{
             this.dbContext = dbContext;
-            this.mapper = mapper;
-			
+            this.contactService = contactService;
 		}
 
 		[HttpGet]
@@ -36,18 +33,7 @@ namespace AutoDetailingApp.Controllers
                 return this.View(model);
             }
 
-            var contactRequest = new ContactRequest()
-            {
-                FullName = model.Name,
-                Email = model.Email,
-                PhoneNumber = model.PhoneNumber,
-                Message = model.Question,
-                CreatedAt = DateTime.Now
-            };
-
-
-            await this.dbContext.ContactRequests.AddAsync(contactRequest);
-            await this.dbContext.SaveChangesAsync();
+            var contactRequest = contactService.SubmitContactRequestAsync(model);
 
             TempData["SuccessMessage"] = "Вашето запитване е изпратено успешно. Очаквайте отговор!";
 
