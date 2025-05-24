@@ -10,12 +10,10 @@ namespace AutoDetailingApp.Controllers
 
     public class ContactController : Controller
     {
-		private readonly AutoDetailingDbContext dbContext;
         private readonly IContactService contactService;
 
 		public ContactController(AutoDetailingDbContext dbContext, IContactService contactService)
 		{
-            this.dbContext = dbContext;
             this.contactService = contactService;
 		}
 
@@ -33,9 +31,18 @@ namespace AutoDetailingApp.Controllers
                 return this.View(model);
             }
 
-            var contactRequest = contactService.SubmitContactRequestAsync(model);
+            try
+            {
+                await contactService.SubmitContactRequestAsync(model);
+                TempData["SuccessMessage"] = "Вашето запитване е изпратено успешно. Очаквайте отговор!";
 
-            TempData["SuccessMessage"] = "Вашето запитване е изпратено успешно. Очаквайте отговор!";
+            }
+            catch
+            {
+                TempData["ErrorMessage"] = "Възникна грешка при изпращането на запитването.Опитайте отново!";
+                return this.View(model);
+            }
+
 
             return this.RedirectToAction(nameof(Contact));           
         }
