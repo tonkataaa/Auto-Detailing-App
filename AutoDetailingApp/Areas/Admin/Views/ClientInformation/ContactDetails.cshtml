@@ -1,0 +1,42 @@
+﻿@model IEnumerable<AutoDetailingApp.Models.ContactRequest>
+
+<head>
+    <link rel="stylesheet" href="~/css/contacts-info.css" />
+</head>
+
+@{
+    ViewData["Title"] = "Запитвания";
+    Layout = null;
+}
+
+<div class="contacts-panel">
+    <h2>Получени съобщения</h2>
+    <div class="contacts-table">
+        <div class="contact-row header">
+            <span>Име</span>
+            <span>Email</span>
+            <span>Телефон</span>
+            <span>Съобщение</span>
+            <span>Дата</span>
+            <span>Действия</span>
+        </div>
+
+        @foreach (var request in Model)
+        {
+         <div class="contact-row">
+              <span>@request.FullName</span>
+              <span>@request.Email</span>
+              <span>@request.PhoneNumber</span>
+              <span>@request.Message</span>
+              <span>@request.CreatedAt</span>
+              <span>
+                 <form asp-action="DeleteContactForm" asp-controller="ClientInformation" method="post">
+                    <input type="hidden" name="email" value="@request.Email" />
+                    <button class="delete-btn">Изтрий</button>
+                 </form>
+                <button class="edit-btn">Отговори</button>
+              </span>
+         </div>
+        }
+  </div>
+</div>

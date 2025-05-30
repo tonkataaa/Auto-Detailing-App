@@ -1,0 +1,42 @@
+﻿@model IEnumerable<AutoDetailingApp.Models.Appointment>
+@{
+    ViewData["Title"] = "Резервации";
+    Layout = null;
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/reservations-info.css" />
+</head>
+
+<div class="reservations-panel">
+    <h2>Списък с резервации</h2>
+    <div class="reservations-table">
+        <div class="reservation-row header">
+            <span>Име</span>
+            <span>Телефон</span>
+            <span>Email</span>
+            <span>Дата</span>
+            <span>Описание</span>
+            <span>Услуга</span>
+            <span>Действия</span>
+        </div>
+
+        @foreach (var userAppointment in Model)
+        {
+            <div class="reservation-row">
+                <span>@userAppointment.FullName</span>
+                <span>@userAppointment.PhoneNumber</span>
+                <span>@userAppointment.Email</span>
+                <span>@userAppointment.Comment</span>
+                <span>@userAppointment.DateTime.Hour</span>
+                <span>@userAppointment.Service</span>
+                <span>
+                    <form asp-action="DeleteReservation" asp-controller="ClientInformation" method="post">
+                        <input type="hidden" name="email" value="@userAppointment.Email"/>
+                        <button type="submit" class="delete-btn">Изтрий</button>
+                    </form>
+                </span>
+            </div>     
+        }
+    </div>
+</div>
