@@ -8,6 +8,7 @@
 	using Microsoft.EntityFrameworkCore;
 	using AutoDetailingApp.Data;
 	using System.Linq.Expressions;
+	using AutoDetailingApp.Models;
 
 	public class BaseRepository<TType, TId> : IRepository<TType, TId>
 		where TType : class
@@ -84,5 +85,32 @@
 			return await dbSet.AnyAsync(predicate);
 		}
 
+		public bool Delete(TType entity)
+		{
+			this.dbSet.Remove(entity);
+			this.dbContext.SaveChanges();
+
+			return true;
+		}
+
+		public async Task<bool> DeleteAsync(TType entity)
+		{
+			this.dbSet.Remove(entity);
+			await this.dbContext.SaveChangesAsync();
+
+			return true;
+		}
+
+		public async Task<Appointment?> GetByEmailAsync(string email)
+		{
+			return await this.dbContext.Appointments
+				.FirstOrDefaultAsync(p => p.Email == email);
+		}
+
+		public async Task<ContactRequest?> GetByContactEmailAsync(string email)
+		{
+			return await this.dbContext.ContactRequests
+				.FirstOrDefaultAsync(p => p.Email == email);
+		}
 	}
 }

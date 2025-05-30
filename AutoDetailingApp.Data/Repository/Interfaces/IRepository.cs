@@ -1,4 +1,5 @@
-﻿using System.Data.Entity.Core.Objects.DataClasses;
+﻿using AutoDetailingApp.Models;
+using System.Data.Entity.Core.Objects.DataClasses;
 using System.Linq.Expressions;
 
 namespace AutoDetailingApp.Data.Repository.Interfaces
@@ -11,12 +12,20 @@ namespace AutoDetailingApp.Data.Repository.Interfaces
 
 		//Read
 		Task<TType?> GetByIdAsync(TId id);
+		Task<Appointment?> GetByEmailAsync(string email);
+		Task<ContactRequest?> GetByContactEmailAsync(string email);
 		Task<IEnumerable<TType>> GetAllAsync();
 		Task<IEnumerable<TType>> FindAsync(Expression<Func<TType, bool>> predicate);
 		Task<bool> ExistsAsync(Expression<Func<TType, bool>> predicate);
+		
 
 		//Update
 		Task<bool> UpdateAsync(TType item);
 		bool Update(TType item);
-    }
+
+		//Delete
+		bool Delete(TType entity);
+		Task<bool> DeleteAsync(TType entity);
+
+	}
 }
