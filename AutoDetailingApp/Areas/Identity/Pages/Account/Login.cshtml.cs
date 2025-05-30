@@ -115,6 +115,14 @@ namespace AutoDetailingApp.Areas.Identity.Pages.Account
 				if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
+
+                    bool isAdmin = await _signInManager.UserManager.IsInRoleAsync(user, "Admin");
+
+                    if (isAdmin)
+                    {
+						return RedirectToAction("Index", "Home", new { area = "Admin" });
+					}
+
                     return LocalRedirect(returnUrl);
                 }
                 if (result.RequiresTwoFactor)

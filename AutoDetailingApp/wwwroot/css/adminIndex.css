@@ -1,0 +1,80 @@
+﻿* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*Main page*/
+.main-page {
+	padding: 8em;
+	height: 80vh;
+	background-color: black;
+}
+
+	.main-page h1 {
+		text-align: center;
+		margin-bottom: 100px;
+		color: white;
+	}
+
+.dashboards {
+	display: flex;
+	justify-content: center;
+	gap: 40px;
+	padding: 0 20px;
+	flex-wrap: wrap;
+}
+
+.dashbox {
+	background-color: rgb(237, 237, 237);
+	border: 2px solid #ccc;
+	border-radius: 20px;
+	width: 450px;
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 20px;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+	transition: transform 0.3s ease;
+}
+
+	.dashbox:hover {
+		transform: translateY(-5px);
+	}
+
+	.dashbox h2 {
+		font-size: 22px;
+		text-align: center;
+		color: #333;
+	}
+
+	.dashbox p {
+		font-size: 16px;
+		color: #666;
+		text-align: center;
+		margin: 20px 0;
+	}
+
+	.dashbox a {
+		display: inline-block;
+		text-decoration: none;
+		color: white;
+		background: linear-gradient(135deg, #28a745, #218838);
+		padding: 12px 24px;
+		font-size: 16px;
+		font-weight: bold;
+		text-align: center;
+		border-radius: 30px;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+		transition: all 0.3s ease;
+		margin-top: auto;
+	}
+
+		.dashbox a:hover {
+			background: linear-gradient(135deg, #218838, #1e7e34);
+			transform: scale(1.05);
+			box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+			text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+		}

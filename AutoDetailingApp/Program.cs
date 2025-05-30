@@ -45,6 +45,11 @@ builder.Services.AddScoped<IContactService, ContactService>();
 builder.Services.AddScoped<IRepository<Service, Guid>, BaseRepository<Service, Guid>>();
 builder.Services.AddScoped<IReservationService, ReservationService>();
 
+builder.Services.ConfigureApplicationCookie(options =>
+{
+	options.LoginPath = "/Admin/Home/Index";
+});
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -73,7 +78,7 @@ using (var scope = app.Services.CreateScope())
 }
 
 app.MapControllerRoute(
-	name: "admin",
+	name: "areas",
 	pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
 app.MapControllerRoute(
 	name: "default",
