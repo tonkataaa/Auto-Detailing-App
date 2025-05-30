@@ -31,15 +31,20 @@
 				{
 					UserName = adminEmail,
 					Email = adminEmail,
-					PasswordHash = adminPassword
 				};
 
-				var result = await userManager.CreateAsync(user, "admin");
+				var result = await userManager.CreateAsync(user, adminPassword);
 				if (result.Succeeded)
 				{
 					await userManager.AddToRoleAsync(user, "Admin");
 				}
+
+				if (!await userManager.IsInRoleAsync(user, "Admin"))
+				{
+					await userManager.AddToRoleAsync(user, "Admin");
+				}
 			}
+
 		}
 	}
 
