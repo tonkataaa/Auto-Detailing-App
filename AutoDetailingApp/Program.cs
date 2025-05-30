@@ -71,11 +71,11 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 //Adding Admin
-using (var scope = app.Services.CreateScope())
-{
-	var services = scope.ServiceProvider;
-	await DbSeeder.CreateAdminWithRoleAsync(services);
-}
+//using (var scope = app.Services.CreateScope())
+//{
+//	var services = scope.ServiceProvider;
+//	await DbSeeder.CreateAdminWithRoleAsync(services);
+//}
 
 app.MapControllerRoute(
 	name: "areas",
