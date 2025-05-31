@@ -16,28 +16,33 @@
                 <div class="logo">
                     <a asp-area="" asp-controller="Home" asp-action="Index">Vivo Detailing</a>
                 </div>
+                <div class="burger-menu" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
                 <ul>
-                    <li><a  asp-area="" asp-controller="Home" asp-action="Index">Начало</a></li>
-                    <li><a  asp-area="" asp-controller="Service" asp-action="Service">Услуги</a></li>
-                    <li><a  asp-area="" asp-controller="Home" asp-action="AboutUs">За нас</a></li>
-                    <li><a  asp-area="" asp-controller="Contact" asp-action="Contact">Контакти</a></li>
-                </ul>
-                <div class="nav-actions">
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Начало</a></li>
+                    <li><a asp-area="" asp-controller="Service" asp-action="Service">Услуги</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="AboutUs">За нас</a></li>
+                    <li><a asp-area="" asp-controller="Contact" asp-action="Contact">Контакти</a></li>
+
                     @if (!User.Identity.IsAuthenticated)
                     {
-                        <a class="login-link" asp-area="Identity" asp-page="/Account/Login">Логин</a>
+                        <li><a class="login-link" asp-area="Identity" asp-page="/Account/Login">Логин</a></li>
                     }
                     else
                     {
-                        <form method="post" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="/" id="logoutForm" class="d-inline">
-                            <button type="submit" class="login-link btn btn-link" style="padding: 0; border: none; background: none;">Излез</button>
-                        </form>
+                        <li>
+                            <form method="post" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="/" id="logoutForm" class="d-inline">
+                                <button type="submit" class="login-link btn btn-link" style="padding: 0; border: none; background: none;">Излез</button>
+                            </form>
+                        </li>
                     }
-                    <a asp-area = "" asp-controller = "Reservation" asp-action = "Reservation" class="login-link">РЕЗЕРВИРАЙ ЧАС</a>
-                    <a href="https://www.instagram.com/vivodetailing/" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </div>
+
+                    <li><a asp-area="" asp-controller="Reservation" asp-action="Reservation" class="login-link">Резервирай час</a></li>
+                    <li><a href="https://www.instagram.com/vivodetailing/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -72,6 +77,7 @@
     </footer>
 
     <script src="~/js/navigation.js" asp-append-version="true"></script>
+    <script src="~/js/burgerMenu.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
