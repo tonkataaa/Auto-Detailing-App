@@ -1,29 +1,29 @@
 ﻿namespace AutoDetailingApp.Areas.Admin.Controllers
 {
+	using Microsoft.AspNetCore.Mvc;
+
 	using AutoDetailingApp.Data.Repository.Interfaces;
 	using AutoDetailingApp.Models;
 	using AutoDetailingApp.Web.ViewModels;
 	using AutoDetailingApp.Web.ViewModels.Reservation;
-	using Microsoft.AspNetCore.Mvc;
-	using static Common.ApplicationConstants;
 
-    [Area(AdminRoleName)]
+	using static Common.ApplicationConstants;
+	using AutoDetailingApp.Services.Data.Interfaces;
+
+	[Area(AdminRoleName)]
     public class ClientInformationController : Controller
     {
-		private readonly IRepository<Appointment, Guid> _reservationRepository;
-		private readonly IRepository<ContactRequest, Guid> _contactRepository;
+		private readonly IAdminService _adminService;
 
-		public ClientInformationController(IRepository<Appointment, Guid> reservationRepository,
-			IRepository<ContactRequest, Guid> contactRepository)
+		public ClientInformationController(IAdminService adminService)
 		{
-			this._reservationRepository = reservationRepository;
-			this._contactRepository = contactRepository;
+			this._adminService = adminService;
 		}
 
 		[HttpGet]
 		public async Task<IActionResult> Details()
         {
-			var reservations = await _reservationRepository.GetAllAsync();
+			var reservations = await _adminService.Details();
 
 			return View(reservations);
 		}
@@ -32,27 +32,15 @@
 		[HttpGet]
 		public async Task<IActionResult> ContactDetails()
         {
-			var contactRequests = await _contactRepository.GetAllAsync();
+			var contactRequest = await _adminService.ContactDetails();
 
-            return View(contactRequests);
+            return View(contactRequest);
         }
 
 		[HttpPost]
 		public async Task<IActionResult> DeleteReservation(ReservationFormModel model)
 		{
-			if (model.PhoneNumber == null)
-			{
-				return BadRequest("Невалиден телефон за резервация");
-			}
-
-			var reservationEmail = await _reservationRepository.GetByEmailAsync(model.Email);
-
-			if (reservationEmail == null)
-			{
-				return NotFound("Резервацията не съществува.");
-			}
-
-			await this._reservationRepository.DeleteAsync(reservationEmail);
+			await _adminService.DeleteReservationAsync(model);
 
 			return RedirectToAction("Details");
 		}
@@ -60,20 +48,7 @@
 		[HttpPost]
 		public async Task<IActionResult> DeleteContactForm (ContactFormModel model)
 		{
-			if (model.Email == null)
-			{
-				return BadRequest("Имейлът не е намерен");
-			}
-
-			var contactEmail = await _contactRepository.GetByContactEmailAsync(model.Email);
-
-			if (contactEmail == null)
-			{
-				return NotFound("Имейлът не съществува!");
-			}
-
-			await _contactRepository.DeleteAsync(contactEmail);
-
+			await _adminService.DeleteContactAsync(model);
 			return RedirectToAction("ContactDetails");
 		}
     }

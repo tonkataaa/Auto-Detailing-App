@@ -1,5 +1,4 @@
-using Microsoft.AspNetCore.Localization;
-using System.Globalization;
+
 using Microsoft.EntityFrameworkCore;
 
 using Microsoft.AspNetCore.Identity;
@@ -9,7 +8,7 @@ using AutoDetailingApp.Data.Repository.Interfaces;
 using AutoDetailingApp.Data.Repository;
 using AutoDetailingApp.Services.Data.Interfaces;
 using AutoDetailingApp.Services.Data;
-using AutoDetailingApp.Data.Seeding;
+using static AutoDetailingApp.Common.EntityValidationConstants;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -41,8 +40,9 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole<Guid>>(options =>
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped(typeof(IRepository<,>), typeof(BaseRepository<,>));
+builder.Services.AddScoped<IRepository<AutoDetailingApp.Models.Service, Guid>, BaseRepository<AutoDetailingApp.Models.Service, Guid>>();
+builder.Services.AddScoped<IAdminService, AdminService>();
 builder.Services.AddScoped<IContactService, ContactService>();
-builder.Services.AddScoped<IRepository<Service, Guid>, BaseRepository<Service, Guid>>();
 builder.Services.AddScoped<IReservationService, ReservationService>();
 
 builder.Services.ConfigureApplicationCookie(options =>
