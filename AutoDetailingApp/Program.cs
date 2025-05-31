@@ -1,14 +1,15 @@
 
 using Microsoft.EntityFrameworkCore;
-
 using Microsoft.AspNetCore.Identity;
+
+using AutoDetailingApp.Web.Infrastructure;
 using AutoDetailingApp.Data;
 using AutoDetailingApp.Models;
 using AutoDetailingApp.Data.Repository.Interfaces;
 using AutoDetailingApp.Data.Repository;
 using AutoDetailingApp.Services.Data.Interfaces;
 using AutoDetailingApp.Services.Data;
-using static AutoDetailingApp.Common.EntityValidationConstants;
+using AutoDetailingApp.Web.Infrastructure.Extensions;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,9 +19,6 @@ var config = new ConfigurationBuilder()
 	.AddEnvironmentVariables()
 	.AddUserSecrets<Program>()
 	.Build();
-
-
-
 builder.Services.AddDbContext<AutoDetailingDbContext>(options =>
 	options.UseSqlServer(connectionString));
 
@@ -39,11 +37,7 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole<Guid>>(options =>
 .AddDefaultTokenProviders();
 
 builder.Services.AddControllersWithViews();
-builder.Services.AddScoped(typeof(IRepository<,>), typeof(BaseRepository<,>));
-builder.Services.AddScoped<IRepository<AutoDetailingApp.Models.Service, Guid>, BaseRepository<AutoDetailingApp.Models.Service, Guid>>();
-builder.Services.AddScoped<IAdminService, AdminService>();
-builder.Services.AddScoped<IContactService, ContactService>();
-builder.Services.AddScoped<IReservationService, ReservationService>();
+builder.Services.AddApplicationServices();
 
 builder.Services.ConfigureApplicationCookie(options =>
 {
