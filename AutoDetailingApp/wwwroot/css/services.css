@@ -237,3 +237,144 @@ nav a i {
 	font-size: 13px;
 	margin-top: 30px;
 }
+
+@media (max-width: 992px) {
+	html, body {
+		margin: 0;
+		padding: 0;
+		overflow-x: hidden;
+	}
+
+	nav, nav ul {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+		nav ul {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			background-color: black;
+			display: none;
+			flex-direction: column;
+			z-index: 9999;
+		}
+
+			nav ul.show {
+				display: flex;
+			}
+}
+
+.intro-page h1 {
+	margin: 0;
+	font-size: 40px;
+	text-align: center;
+	margin-top: 60%;
+	margin-left: 0;
+}
+
+.intro-page {
+	padding: 40px 20px;
+	align-items: center;
+	text-align: center;
+}
+
+@media (max-width: 992px) {
+	.service-section {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+		.service-section.reverse {
+			flex-direction: column;
+		}
+
+		.service-section img,
+		.service-section video {
+			width: 100%;
+			max-width: 100%;
+			height: auto;
+		}
+
+	.intro-page h1 {
+		margin: 0;
+		font-size: 40px;
+		text-align: center;
+		margin-top: 60%;
+		margin-left: 0;
+	}
+
+	.intro-page {
+		padding: 40px 20px;
+		align-items: center;
+		text-align: center;
+	}
+}
+
+
+/* За малки телефони */
+@media (max-width: 576px) {
+	.intro-page h1 {
+		font-size: 32px;
+		margin-top: 70%;
+	}
+
+	.services-header h2 {
+		font-size: 36px;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+
+	.service-text h3 {
+		font-size: 22px;
+		text-align: center;
+	}
+
+	nav {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.nav-actions {
+		width: 100%;
+		justify-content: space-between;
+	}
+}
+
+@media (max-width: 576px) {
+	nav {
+		flex-direction: row; 
+		align-items: center; 
+		justify-content: space-between; 
+		width: 100%; 
+		padding: 0 20px; 
+	}
+
+	.nav-actions {
+		width: auto; 
+	}
+}
+
+/* Центриране на footer */
+footer {
+	background-color: black;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	font-size: 16px;
+}
+
+@media (max-width: 768px) {
+	.footer-container {
+		flex-direction: column;
+		align-items: center; 
+		text-align: center; 
+	}
+
+	.footer-column {
+		text-align: center;
+	}
+}
