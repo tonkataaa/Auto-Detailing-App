@@ -1,10 +1,12 @@
 ﻿document.addEventListener('DOMContentLoaded', () => {
     const burger = document.getElementById('burger');
-    const navList = document.querySelector('nav ul');
+    const navList = document.getElementById('navLinks');
     const navigation = document.querySelector('.navigation');
+    const navActions = document.querySelector('.nav-actions');
 
     burger.addEventListener('click', () => {
         navList.classList.toggle('mobile-visible');
+        if (navActions) navActions.classList.toggle('mobile-visible');
         burger.classList.toggle('active');
     });
 
@@ -20,6 +22,9 @@
 
         if (currentScroll > lastScroll && !navigation.classList.contains('hidden')) {
             navigation.classList.add('hidden');
+            navList.classList.remove('mobile-visible');
+            if (navActions) navActions.classList.remove('mobile-visible');
+            burger.classList.remove('active');
         } else if (currentScroll < lastScroll && navigation.classList.contains('hidden')) {
             navigation.classList.remove('hidden');
         }

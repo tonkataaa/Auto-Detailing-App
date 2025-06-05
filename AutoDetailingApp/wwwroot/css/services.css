@@ -183,23 +183,6 @@ nav a i {
 	box-shadow: 0 0 20px rgba(0, 170, 255, 0.2);
 }
 
-/* Optional: Responsive fix */
-@media (max-width: 768px) {
-	.service-section {
-		flex-direction: column;
-		text-align: center;
-	}
-
-		.service-section.reverse {
-			flex-direction: column;
-		}
-
-		.service-section img {
-			width: 100%;
-		}
-}
-
-
 /*Footer*/
 .vivo-footer {
 	background-color: black;

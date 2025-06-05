@@ -13,10 +13,10 @@ using AutoDetailingApp.Web.Infrastructure.Extensions;
 
 
 var builder = WebApplication.CreateBuilder(args);
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+var connectionString = builder.Configuration["SQLServer:ConnectionString"];
 var config = new ConfigurationBuilder()
-	.AddJsonFile($"appsettings.json", true, true)
-	.AddEnvironmentVariables()
+    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+    .AddEnvironmentVariables()
 	.AddUserSecrets<Program>()
 	.Build();
 builder.Services.AddDbContext<AutoDetailingDbContext>(options =>
