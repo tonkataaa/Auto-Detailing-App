@@ -4,7 +4,32 @@
 
 @section Styles{
     <link rel="stylesheet" href="~/css/services.css" asp-append-version="true">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">   
+}
+
+@section Scripts{
+    <script src="https://cdn.jsdelivr.net/npm/before-after-slider@1.0.0/dist/slider.bundle.js"></script>
+    <script>
+        new SliderBar({
+            el: '#headlights-detailing',            
+            beforeImg: '@Url.Content("~/images/beforeNow/hlb.jpg")',  
+            afterImg: '@Url.Content("~/images/beforeNow/hln.jpg")',    
+            width: "",               
+            height: "default",           
+            line: false,                 
+            lineColor: "rgba(0,0,0,0.5)" 
+        });
+
+        new SliderBar({
+            el: '#interior-detailing',
+            beforeImg: '@Url.Content("~/images/beforeNow/ibbimage.jpg")',
+            afterImg: '@Url.Content("~/images/beforeNow/innimage.jpg")',
+            width: "",
+            height: "550px",
+            line: false,
+            lineColor: "rgba(0,0,0,0.5)"
+        })
+    </script>
 }
 
 @{
@@ -15,7 +40,7 @@
     <div class="intro-page">
         <h1>Услуги</h1>
         <video autoplay muted loop playsinline class="background-video">
-            <source src="~/images/Exterior/2.mov" type="video/mp4" />
+            <source src="~/images/Exterior/window.mov" type="video/mp4" />
             Вашият браузър не поддържа видео.
         </video>
     </div>
@@ -37,7 +62,7 @@
             </ul>
         </div>
         <video controls="controls" autoplay muted loop>
-                <source src="~/images/c300d612889e42fe856079b70dd567b3.mov"  type="video/mp4" />
+                <source src="~/images/Exterior/2.mov"  type="video/mp4" />
     </video>   
     </div>
 
@@ -50,7 +75,9 @@
                 <li>💧 Импрегниране на текстил или кожа</li>
             </ul>
         </div>
-        <img src="~/images/interiorDetailing1.jpg" alt="Interior detailing">
+        <div id="interior-detailing">
+            <img src="~/images/interiorDetailing1.jpg" alt="Interior detailing">
+        </div>
     </div>
 
     <div class="service-section">
@@ -61,7 +88,9 @@
                 <li>🛡️ Защитно покритие с трайност до 1 година</li>
             </ul>
         </div>
-        <img src="~/images/494574761_1342482263717441_1213009482042067317_n.jpg" alt="Headlight polishing">
+        <div id="headlights-detailing">
+            <img src="~/images/interiorDetailing1.jpg" alt="Interior detailing">
+        </div>
     </div>
 </section>
 
