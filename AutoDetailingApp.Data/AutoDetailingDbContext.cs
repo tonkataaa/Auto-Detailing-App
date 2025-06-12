@@ -1,5 +1,4 @@
-﻿
-namespace AutoDetailingApp.Data
+﻿namespace AutoDetailingApp.Data
 {
 	using Microsoft.AspNetCore.Identity;
 	using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -14,18 +13,13 @@ namespace AutoDetailingApp.Data
 	{
 		private readonly IConfiguration _configuration;
 
-		public AutoDetailingDbContext()
-		{
-			
-		}
+        public AutoDetailingDbContext(DbContextOptions<AutoDetailingDbContext> options, IConfiguration configuration)
+        : base(options)
+        {
+            _configuration = configuration;
+        }
 
-		public AutoDetailingDbContext(DbContextOptions options, IConfiguration configuration)
-			: base(options)
-		{
-			_configuration = configuration;
-		}
-
-		public virtual DbSet<Appointment> Appointments { get; set; } = null!;
+        public virtual DbSet<Appointment> Appointments { get; set; } = null!;
 
 		public virtual DbSet<ContactRequest> ContactRequests { get; set; } = null!;
 
@@ -33,17 +27,7 @@ namespace AutoDetailingApp.Data
 
 		public virtual DbSet<Service> Services { get; set; } = null!;
 
-		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-		{	
-			if (!optionsBuilder.IsConfigured)
-			{
-				optionsBuilder.UseSqlServer(
-					_configuration.GetConnectionString("AutoDetailingDb"),
-					b => b.MigrationsAssembly("AutoDetailingApp.Data"));
-			}
-		}
-
-		protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
 			modelBuilder.Entity<Service>(e =>
 			{

@@ -7,6 +7,7 @@ using AutoDetailingApp.Data;
 using System.Data.Entity;
 using AutoDetailingApp.Services.Data;
 using AutoDetailingApp.Services.Data.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AutoDetailingApp.Controllers;
 
@@ -43,6 +44,7 @@ public class HomeController : Controller
     }
 
     [HttpGet]
+    [Authorize]
     public async Task<IActionResult> Reservation()
     {
         var model = new ReservationFormModel

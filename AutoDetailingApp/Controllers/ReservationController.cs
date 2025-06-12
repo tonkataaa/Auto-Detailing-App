@@ -18,6 +18,7 @@
 
 		[HttpGet]
 		[Authorize]
+		//T0D0 ADD CUSTOM ERROR PAGE
 		public async Task<IActionResult> Reservation()
 		{
 			var model = new ReservationFormModel

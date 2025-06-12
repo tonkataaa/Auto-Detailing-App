@@ -14,6 +14,8 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
+using WebMatrix.WebData;
+using AutoDetailingApp.Areas.Identity.Services;
 
 namespace AutoDetailingApp.Areas.Identity.Pages.Account
 {
@@ -52,34 +54,33 @@ namespace AutoDetailingApp.Areas.Identity.Pages.Account
 
         public async Task<IActionResult> OnPostAsync()
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                var user = await _userManager.FindByEmailAsync(Input.Email);
-                if (user == null || !(await _userManager.IsEmailConfirmedAsync(user)))
-                {
-                    // Don't reveal that the user does not exist or is not confirmed
-                    return RedirectToPage("./ForgotPasswordConfirmation");
-                }
+                return Page();
+            }
 
-                // For more information on how to enable account confirmation and password reset please
-                // visit https://go.microsoft.com/fwlink/?LinkID=532713
-                var code = await _userManager.GeneratePasswordResetTokenAsync(user);
-                code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
-                var callbackUrl = Url.Page(
-                    "/Account/ResetPassword",
-                    pageHandler: null,
-                    values: new { area = "Identity", code },
-                    protocol: Request.Scheme);
-
-                await _emailSender.SendEmailAsync(
-                    Input.Email,
-                    "Reset Password",
-                    $"Please reset your password by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
-
+            var user = await _userManager.FindByEmailAsync(Input.Email);
+            if (user == null)
+            {
                 return RedirectToPage("./ForgotPasswordConfirmation");
             }
 
-            return Page();
+            var code = await _userManager.GeneratePasswordResetTokenAsync(user);
+            var userId = await _userManager.GetUserIdAsync(user);
+            var encodedCode = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+
+            var callbackUrl = Url.Page(
+                "/Account/ResetPassword",
+                pageHandler: null,
+                values: new { code = encodedCode, userId = userId },
+                protocol: Request.Scheme);
+
+            await _emailSender.SendEmailAsync(
+                Input.Email,
+                "Смяна на парола",
+                $"Моля, натиснете <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>тук</a>, за да смените паролата си.");
+
+            return RedirectToPage("./ForgotPasswordConfirmation");
         }
     }
 }
