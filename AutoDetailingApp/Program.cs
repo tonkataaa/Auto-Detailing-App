@@ -39,8 +39,26 @@ builder.Services.AddApplicationServices();
 
 builder.Services.ConfigureApplicationCookie(options =>
 {
-    options.LoginPath = "/Admin/Home/Index";
+    options.LoginPath = "/Identity/Account/Login";
+    options.AccessDeniedPath = "/Identity/Account/AccessDenied";
+
+    options.Events.OnRedirectToLogin = context =>
+    {
+        var requestPath = context.Request.Path;
+
+        if (requestPath.StartsWithSegments("/Home/Reservation"))
+        {
+            context.Response.Redirect("/Identity/Account/Login?error=reservation");
+        }
+        else
+        {
+            context.Response.Redirect("/Identity/Account/Login");
+        }
+
+        return Task.CompletedTask;
+    };
 });
+
 
 var app = builder.Build();
 

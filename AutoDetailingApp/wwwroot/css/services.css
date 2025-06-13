@@ -83,21 +83,21 @@ nav a i {
 
 /*Intro page*/
 .intro-page {
-	color: white;
-	background-color: black;
-	height: 725px;
-	padding: 75px;
-	display: flex;
-	flex-direction: column;
-	padding: 70px;
-	gap: 15px;
-	color: white;
-	background-color: black;
-	align-items: start;
+    color: white;
+    background-color: black;
+    height: 725px;
+    padding: 75px;
+    display: flex;
+    flex-direction: column;
+    padding: 70px;
+    gap: 15px;
+    color: white;
+    background-color: black;
+    align-items: start;
 
-	position: relative;
-	overflow: hidden;
-	z-index: 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
 }
 
 

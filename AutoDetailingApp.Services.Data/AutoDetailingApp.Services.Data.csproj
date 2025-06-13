@@ -7,13 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.3.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.3.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\AutoDetailingApp.Common\AutoDetailingApp.Common.csproj" />
+    <ProjectReference Include="..\AutoDetailingApp.Data\AutoDetailingApp.Data.csproj" />
     <ProjectReference Include="..\AutoDetailingApp.Models\AutoDetailingApp.Models.csproj" />
+    <ProjectReference Include="..\AutoDetailingApp.Web.ViewModels\AutoDetailingApp.Web.ViewModels.csproj" />
   </ItemGroup>
 
 </Project>
