@@ -31,6 +31,7 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\AutoDetailingApp.Common\AutoDetailingApp.Common.csproj" />
+		<ProjectReference Include="..\AutoDetailingApp.Data\AutoDetailingApp.Data.csproj" />
 		<ProjectReference Include="..\AutoDetailingApp.Models\AutoDetailingApp.Models.csproj" />
 		<ProjectReference Include="..\AutoDetailingApp.Services.Data\AutoDetailingApp.Services.Data.csproj" />
 		<ProjectReference Include="..\AutoDetailingApp.Web.Infrastructure\AutoDetailingApp.Web.Infrastructure.csproj" />

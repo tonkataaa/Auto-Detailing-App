@@ -9,24 +9,26 @@
 
 	using static Common.ApplicationConstants;
 	using AutoDetailingApp.Services.Data.Interfaces;
+    using AutoDetailingApp.Data;
 
-	[Area(AdminRoleName)]
+    [Area(AdminRoleName)]
     public class ClientInformationController : Controller
     {
 		private readonly IAdminService _adminService;
+        private readonly AutoDetailingDbContext _context;
 
-		public ClientInformationController(IAdminService adminService)
+        public ClientInformationController(IAdminService adminService, AutoDetailingDbContext dbContext)
 		{
 			this._adminService = adminService;
-		}
+			this._context = dbContext;
+        }
 
 		[HttpGet]
 		public async Task<IActionResult> Details()
         {
-			var reservations = await _adminService.Details();
-
-			return View(reservations);
-		}
+            var reservations = await _adminService.DetailsWithServices();
+            return View(reservations);
+        }
 
 
 		[HttpGet]

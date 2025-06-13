@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<AutoDetailingApp.Models.Appointment>
+@using System.Globalization
 @{
     ViewData["Title"] = "Резервации";
     Layout = null;
@@ -27,9 +28,9 @@
                 <span>@userAppointment.FullName</span>
                 <span>@userAppointment.PhoneNumber</span>
                 <span>@userAppointment.Email</span>
+                <span>@userAppointment.DateTime.ToString("dd.MM.yyyy HH:mm", new CultureInfo("bg-BG"))</span>
                 <span>@userAppointment.Comment</span>
-                <span>@userAppointment.DateTime.Hour</span>
-                <span>@userAppointment.Service</span>
+                <span>@userAppointment.Service?.Name</span>
                 <span>
                     <form asp-action="DeleteReservation" asp-controller="ClientInformation" method="post">
                         <input type="hidden" name="email" value="@userAppointment.Email"/>

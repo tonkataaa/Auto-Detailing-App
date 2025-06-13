@@ -1,4 +1,5 @@
-﻿using AutoDetailingApp.Web.ViewModels;
+﻿using AutoDetailingApp.Models;
+using AutoDetailingApp.Web.ViewModels;
 using AutoDetailingApp.Web.ViewModels.Reservation;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -19,5 +20,7 @@ namespace AutoDetailingApp.Services.Data.Interfaces
 		Task DeleteReservationAsync(ReservationFormModel model);
 
         Task DeleteContactAsync(ContactFormModel model);
+
+        Task<IEnumerable<Appointment>> DetailsWithServices();
     }
 }

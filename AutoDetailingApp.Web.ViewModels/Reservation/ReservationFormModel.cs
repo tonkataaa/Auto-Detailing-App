@@ -38,7 +38,7 @@
 
 		[MinLength(CommentMinLength, ErrorMessage = CommentMinMessage)]
 		[MaxLength(CommentMaxLength, ErrorMessage = CommentMaxMessage)]
-		public string Comment { get; set; }
+		public string? Comment { get; set; }
 
 		public DateTime CreatedAt { get; set; }
 
