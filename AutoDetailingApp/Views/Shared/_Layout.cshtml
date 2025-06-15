@@ -1,9 +1,21 @@
-﻿<!DOCTYPE html>
+﻿@{
+    ViewData["Title"] = "Начало | VivoDetailing";
+    ViewData["MetaDescription"] = "Професионално авто детайлиране в Огняново. Полиране, вътрешно и външно почистване, керамична защита.";
+    ViewData["MetaKeywords"] = "авто детайлиране, полиране, външно, вътрешно почистване, Огняново, Пазарджик, Пловдив";
+    // ViewData["PageUrl"] = "https://vivodetailing.bg/"; 
+    // ViewData["OgImage"] = "https://vivodetailing.bg/images/og-default.jpg"; 
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - AutoDetailingApp</title>
+    <title>@ViewData["Title"]</title>
+    <meta name="description" content="@ViewData["MetaDescription"]" />
+    <meta name="keywords" content="@ViewData["MetaKeywords"]"
+    <meta property="og:title" content="@ViewData["Title"]" />
+    <meta property="og:description" content="@ViewData["MetaDescription"]" />
     <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/AutoDetailingApp.styles.css" asp-append-version="true"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -66,9 +78,9 @@
             </div>
             <div class="footer-column">
                 <h3>VIVO DETAILING</h3>
-                <p>гр. Пазарджик, България</p>
+                <p>с. Огняново, България</p>
                 <p>Email: info@vivodetailing.bg</p>
-                <p>Телефон: 0888 123 456</p>
+                <p>Телефон: 089 8388487</p>
             </div>
         </div>
         <div class="footer-bottom">
