@@ -6,7 +6,11 @@ namespace AutoDetailingApp.Controllers
     {
         public IActionResult Service()
         {
-			return View();
+            ViewData["Title"] = "Услуги | VivoDetailing";
+            ViewData["MetaDescription"] = "Виж всички услуги за професионално авто детайлиране – външно и вътрешно почистване, полиране, керамична защита.";
+            ViewData["MetaKeywords"] = "услуги, авто детайлиране, полиране, външно почистване, вътрешно почистване, керамична защита";
+
+            return View();
 		}
 
 

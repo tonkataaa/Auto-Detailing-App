@@ -1,7 +1,4 @@
 ﻿@{
-    ViewData["Title"] = "Начало | VivoDetailing";
-    ViewData["MetaDescription"] = "Професионално авто детайлиране в Огняново. Полиране, вътрешно и външно почистване, керамична защита.";
-    ViewData["MetaKeywords"] = "авто детайлиране, полиране, външно, вътрешно почистване, Огняново, Пазарджик, Пловдив";
     // ViewData["PageUrl"] = "https://vivodetailing.bg/"; 
     // ViewData["OgImage"] = "https://vivodetailing.bg/images/og-default.jpg"; 
 }
@@ -12,8 +9,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"]</title>
+    <meta name="title" content="@ViewData["Title"]" />
     <meta name="description" content="@ViewData["MetaDescription"]" />
-    <meta name="keywords" content="@ViewData["MetaKeywords"]"
+    <meta name="keywords" content="@ViewData["MetaKeywords"]" />
     <meta property="og:title" content="@ViewData["Title"]" />
     <meta property="og:description" content="@ViewData["MetaDescription"]" />
     <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />

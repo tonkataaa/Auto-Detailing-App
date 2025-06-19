@@ -9,7 +9,7 @@ using System.Net;
 using System.Net.Mail;
 
 var builder = WebApplication.CreateBuilder(args);
-var connectionString = builder.Configuration["SQLServer:ConnectionString"];
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 var config = new ConfigurationBuilder()
     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
     .AddEnvironmentVariables()
@@ -17,7 +17,14 @@ var config = new ConfigurationBuilder()
     .Build();
 
 builder.Services.AddDbContext<AutoDetailingDbContext>(options =>
-    options.UseSqlServer(connectionString));
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("DefaultConnection"),
+        sqlOptions => {
+            sqlOptions.EnableRetryOnFailure();
+            sqlOptions.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery);
+        }
+    ));
+
 
 builder.Services.AddSingleton<IEmailSender, EmailSender>();
 

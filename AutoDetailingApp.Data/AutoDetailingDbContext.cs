@@ -13,10 +13,9 @@
 	{
 		private readonly IConfiguration _configuration;
 
-        public AutoDetailingDbContext(DbContextOptions<AutoDetailingDbContext> options, IConfiguration configuration)
+        public AutoDetailingDbContext(DbContextOptions<AutoDetailingDbContext> options)
         : base(options)
         {
-            _configuration = configuration;
         }
 
         public virtual DbSet<Appointment> Appointments { get; set; } = null!;

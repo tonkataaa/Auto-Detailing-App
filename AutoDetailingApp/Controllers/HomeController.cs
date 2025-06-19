@@ -1,4 +1,4 @@
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using AutoDetailingApp.Models;
 using AutoDetailingApp.Web.ViewModels.Reservation;
@@ -25,6 +25,10 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        ViewData["Title"] = "Начало | VivoDetailing";
+        ViewData["MetaDescription"] = "Професионално авто детайлиране в Огняново. Полиране, вътрешно и външно почистване, керамична защита.";
+        ViewData["MetaKeywords"] = "авто детайлиране, полиране, външно, вътрешно почистване, Огняново, Пазарджик, Пловдив";
+
         return View();
     }
 
@@ -35,10 +39,14 @@ public class HomeController : Controller
 
     public IActionResult AboutUs()
     {
+        ViewData["Title"] = "За Нас | VivoDetailing";
+        ViewData["MetaDescription"] = "Научете повече за екипа на Vivo Detailing, нашата мисия и страстта ни към професионалното авто детайлиране.";
+        ViewData["MetaKeywords"] = "за нас, екип, Vivo Detailing, авто детайлиране, мисия";
+
         return View();
     }
 
-    public async Task<IActionResult> Contacs()
+    public async Task<IActionResult> Contact()
     {
         return this.View();
     }

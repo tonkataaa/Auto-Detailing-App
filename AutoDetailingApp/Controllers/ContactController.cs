@@ -20,6 +20,10 @@ namespace AutoDetailingApp.Controllers
 		[HttpGet]
         public async  Task<IActionResult> Contact()
         {
+            ViewData["Title"] = "Контакти | VivoDetailing";
+            ViewData["MetaDescription"] = "Свържи се с Vivo Detailing – адрес, телефон, имейл и работно време на нашия сервиз в Огняново.";
+            ViewData["MetaKeywords"] = "контакти, авто детайлиране, телефон, имейл, Огняново, Vivo Detailing";
+
             return  this.View();
         }
 

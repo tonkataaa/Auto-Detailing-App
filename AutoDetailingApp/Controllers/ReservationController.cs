@@ -21,7 +21,11 @@
 		//T0D0 ADD CUSTOM ERROR PAGE
 		public async Task<IActionResult> Reservation()
 		{
-			var model = new ReservationFormModel
+            ViewData["Title"] = "Резервирай час | VivoDetailing";
+            ViewData["MetaDescription"] = "Запази час за професионално авто детайлиране при Vivo Detailing. Лесна онлайн резервация на достъпни услуги.";
+            ViewData["MetaKeywords"] = "резервация, авто детайлиране, час, почистване, керамика, полиране";
+
+            var model = new ReservationFormModel
 			{
 				AvailableServices = await reservationService.GetAvailableServicesAsync(),
 				AvailableHours = reservationService.GetAvailableHours()
