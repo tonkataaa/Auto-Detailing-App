@@ -4,7 +4,7 @@ The app supports user registration, login, password recovery, and includes an ad
 
 ## 🌐 Access for the app
 You can check it at:  
-🔗 vivodetailing-eab6fygcfhbcchd3.germanywestcentral-01.azurewebsites.net
+🔗 https://vivodetailing.com
 
 ## 📌 Main features
 - 👤 User registration and authentication 
